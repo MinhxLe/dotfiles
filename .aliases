@@ -1,0 +1,7 @@
+alias ocaml='rlwrap ocaml'
+alias hoffman='minhle@hoffman2.idre.ucla.edu'
+alias sudo="sudo -E"
+alias rm="rm -i"
+#alias python=python3
+alias cdg="cd \$(git rev-parse --show-toplevel)"
+WALLPAPER_PATH=~/Pictures/wallpaper/

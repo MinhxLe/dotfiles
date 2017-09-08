@@ -1,0 +1,4 @@
+xbindkeys
+xrdb ~/.Xresources
+exec i3
+redshift
