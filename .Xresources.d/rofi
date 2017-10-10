@@ -12,3 +12,5 @@ rofi.columns: 3
 
 !rofi.fullscreen : true
 
+!---type---------------
+rofi.modi window,run,ssh

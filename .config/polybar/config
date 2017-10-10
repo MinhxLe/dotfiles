@@ -7,7 +7,7 @@ background = #131313
 background-alt = #333
 
 foreground = #2A1F28
-foreground-alt = #DEDEE6
+foreground-alt = #6C7DB1
 
 trans = #00FFFFFF
 white = #eee
@@ -23,6 +23,7 @@ red = #ee3333
 ;-------------------------------------------------------------------------------
 
 [bar/main]
+monitor = ${env:MONITOR:fallback-value}
 width = 100%
 height = 25
 radius = 1.0
@@ -75,7 +76,7 @@ label-focused-foreground = ${colors.foreground-alt}
 
 [module/song]
 type = custom/script
-exec = ~/.config/polybar/scripts/playerctl.sh
+exec = ~/.config/polybar/scripts/mpc.sh
 interval = 2
 click-left = mpc toggle
 

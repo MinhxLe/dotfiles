@@ -44,8 +44,8 @@ set $mod Mod1
 #set $indicator-color     #070d25
 
 #run
-set $inactive-bg-color            #DEDEE6
-set $bg-color   #2A1F28
+set $bg-color            #DEDEE6
+set $inactive-bg-color   #2A1F28
 set $text-color          #DEDDDA
 set $inactive-text-color #DEDDDA
 set $urgent-bg-color     #fdeae5
@@ -81,7 +81,7 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec rofi -show run #-rnow -run-command "zsh -i -c '{cmd}'"
-bindsym $mod+Shift+d exec xdg-open "$(locate home | rofi -dmenu)"
+bindsym $mod+Shift+d exec xdg-open "$(locate ~/ | rofi -dmenu)"
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -221,7 +221,7 @@ client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color         $indicator-color
 
-new_window pixel
+new_window pixel 4
 
 #i3lock
 bindsym $mod+q exec i3lock -c 000000

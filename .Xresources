@@ -2,7 +2,7 @@
 
 !selecting rxvt color
 #include ".Xresources.d/rxvt-unicode"
-#include ".Xresources.d/rxvt-run"
+#include ".Xresources.d/rxvt-molokai"
 
 !rofi settings
 #include ".Xresources.d/rofi"

@@ -1,0 +1,31 @@
+wicd
+wicd-gtk
+i3
+xfce4
+xorg
+
+pulseaudio
+pavucontrol
+alsa-utils
+pulseaudio-alsa
+
+evince
+git
+vim
+sbcl
+zsh
+zsh-completions
+chsh -l
+
+udisks2
+
+gdg
+
+pacaur
+pacman -S --needed
+rofi
+urxvt
+ranger
+xbindkey
+tmux
+

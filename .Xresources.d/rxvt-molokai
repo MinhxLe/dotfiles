@@ -19,4 +19,4 @@ URxvt*color14: #4eb4fa
 URxvt*color15: #d0d0d0
 
 urxvt*depth: 32
-urxvt*background: rgba:1000/1000/1000/c800
+urxvt*background: rgba:1000/1000/1000/FF00
