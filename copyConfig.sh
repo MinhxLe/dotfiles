@@ -23,3 +23,4 @@ cp ~/.xbindkeysrc .
 #tmux
 cp ~/.tmux.conf .
 cp ~/.tmux.conf.bak .
+cp ~/.tmux.conf.local .
