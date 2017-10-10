@@ -2,6 +2,8 @@
 #shell
 cp ~/.zshrc .
 cp ~/.aliases .
+cp ~/.oh-my-zsh/themes/minimal2.zsh-theme .
+
 #x server
 cp ~/.xinitrc .
 cp ~/.Xresources . 
