@@ -1,16 +1,17 @@
 call plug#begin('~/.vim/plugged')
-"color schemes
 Plug 'tomasr/molokai'
-Plug 'vim-scripts/mayansmoke'
+"Plug 'altercation/vim-colors-solarized'
 "Plug 'vim-scripts/pyte'
 "Plug 'vim-scripts/mayansmoke'
+"Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'MattesGroeger/vim-bookmarks'
 
-"synatx highlighting
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 "NERD tree
 Plug 'scrooloose/nerdtree'
-nmap <Leader>f :NERDTreeToggle<CR>
+map <Leader>f :NERDTreeToggle<CR>
 "vim-fugitive : git wrapper
 Plug 'tpope/vim-fugitive'
 "git-gutter
@@ -18,45 +19,41 @@ Plug 'airblade/vim-gitgutter'
 "Tagbar
 Plug 'majutsushi/tagbar'
 nmap <Leader>s :TagbarToggle<CR>
-"YCM
-Plug 'Valloric/YouCompleteMe'
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_python_binary_path = '/usr/bin/python'
-let g:ycm_show_diagnostics_ui = 0
-
 Plug 'itchyny/lightline.vim'
-
 "Plug 'coot/atp_vim'
 "Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'davidhalter/jedi-vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
+
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+"nvim
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', {'do' : ':UpdateRemotePlugins'}
+  Plug 'zchee/deoplete-jedi'
+endif
 Plug 'ervandew/supertab'
-Plug 'Raimondi/delimitMate'
-
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-Plug 'vim-syntastic/syntastic'
-"bookmarks
-Plug 'MattesGroeger/vim-bookmarks'
-"make wrapper
-Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+  let g:jedi#completions_enabled = 0
+endif
+
+
 let g:airline_theme = 'distinguished'
-let g:jedi#completions_enabled = 1
 let g:jedi#use_splits_not_buffers = "left"
 
-"let g:jedi#show_call_signatures = "0"
 "basics
 set mouse=a
 set encoding=utf-8
 "set nobackup
 "set noswapfile
-set backupdir=~/.vim/tmp,.
-set directory=~/.vim/tmp,.
+set backupdir=~/.vim/tmp/.
+set directory=~/.vim/tmp/.
 
 set backspace=2
 filetype plugin indent on
@@ -88,11 +85,12 @@ set scrolloff=5
 " nnoremap / /\v
 
 " indent
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set shiftround
 set autoindent
+set smartindent
 set smarttab
 set expandtab
 set si
@@ -114,7 +112,9 @@ let c_cpp_comments = 0
 "  :20  :  up to 20 lines of command-line history will be remembered
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
-set viminfo='10,\"100,:20,%,n~/.viminfo
+if !has('nvim')
+  set viminfo='10,\"100,:20,%,n~/.viminfo
+endif
 
 function! ResCur()
   if line("'\"") <= line("$")
@@ -142,10 +142,6 @@ vnoremap <C-c> "*y
 
 "set foldmethod=syntax
 
-"quotations
-":inoremap ( ()<Esc>i
-":inoremap { {}<Esc>i
-
 "split screan movement
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -154,41 +150,20 @@ nnoremap <C-H> <C-W><C-H>
 
 
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'solarized',
       \ }
 
-set relativenumber
-
-let g:ycm_confirm_extra_conf = 0
-" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<c-e>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+:nmap <silent> <C-j> :wincmd j<CR>
+:nmap <silent> <C-f> :BLines<CR>
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"autocomplete
+"let g:ycm_python_binary_path = 'python'
 
 
-"lighline
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
