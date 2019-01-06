@@ -6,10 +6,10 @@ cp ~/.Xresources .
 cp -r ~/.Xresources.d .
 #i3
 cp -r ~/.config/i3/ ./.config/.
-cp -r ~/.config/polybar/ ./.config/.
+cp -r ~/.config/polybar/ ./.config/polybar/
 #vim
 cp ~/.vimrc .
-
+cp ~/.vim/init.vim .vim/init.vim
 
 #xbindkey
 cp ~/.xbindkeysrc .
