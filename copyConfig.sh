@@ -28,6 +28,8 @@ cp ~/.zshrc .
 cp ~/.aliases .
 cp ~/.oh-my-zsh/themes/minimal2.zsh-theme .
 
+#rofi
+cp -r ~/.config/rofi ./.config/
 
 #tmux
 cp -r ~/.tmux.conf ./.tmux.conf
