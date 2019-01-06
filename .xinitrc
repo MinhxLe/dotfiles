@@ -1,4 +1,4 @@
 xbindkeys
 xrdb ~/.Xresources
 exec i3
-redshift
+pgrep redshift &> /dev/null || redshift &> /dev/null &

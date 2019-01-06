@@ -36,13 +36,14 @@ tmux_conf_new_pane_reconnect_ssh=false
 tmux_conf_new_session_prompt=false
 
 # splitting
-# split panes using | and -
+# split panes using h and v
 bind h split-window -h
 bind v split-window -v
 unbind '"'
 unbind %
 
 # -- display -------------------------------------------------------------------
+set-option -g allow-rename off
 
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
@@ -262,11 +263,11 @@ set -g mouse on
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
+ #set -gu prefix2
+ #unbind C-a
+ #unbind C-b
+ #set -g prefix C-a
+ #bind C-a send-prefix
 
 # move status line to top
 # set -g status-position top

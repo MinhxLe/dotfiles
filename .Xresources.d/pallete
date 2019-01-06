@@ -1,0 +1,7 @@
+#include "palletes/waves"
+
+
+Pallete.primary1: light1
+Pallete.primary2: light2
+Pallete.secondary1: dark1
+Pallate.secondary2: dark2

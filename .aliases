@@ -1,11 +1,36 @@
+#basic programs
 alias ocaml='rlwrap ocaml'
-alias sshhoffman='ssh minhle@hoffman2.idre.ucla.edu'
 alias sudo="sudo -E"
 alias rm="rm -i"
-#alias python=python3
+alias vim='nvim'
+alias v='nvim'
+
 alias cdg="cd \$(git rev-parse --show-toplevel)"
 alias rmswp='find . -type f -name "*.sw[klmnop]" -delete'
 
 WALLPAPER_PATH=~/Pictures/wallpaper/
 
+#ssh
+alias sshhoffman='ssh minhle@login3.hoffman2.idre.ucla.edu'
+alias sftphoffman='sftp minhle@dtn2.hoffman2.idre.ucla.edu'
 
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+
+#github
+alias gac="git add -A && git commit -m"
+alias gp='git push'
+
+#python venv
+
+alias avenv='virtualenv -p python3 venv'
+alias ivenv='source venv/bin/activate'
+alias rvenv='rm -rf venv'
+
+#tools
+alias hfzf='history | fzf'
+alias wifi='nmtui'
+
+#juypter notebook
+j_script() {
+  jupyter nbconvert --to script $1
+}

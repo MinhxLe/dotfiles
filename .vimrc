@@ -24,7 +24,7 @@ Plug 'itchyny/lightline.vim'
 "Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'davidhalter/jedi-vim'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
 
 "Plug 'SirVer/ultisnips'
@@ -161,7 +161,11 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 :nmap <silent> <C-j> :wincmd j<CR>
+
+"fzf shortcuts
 :nmap <silent> <C-f> :BLines<CR>
+:nmap <silent> <C-o> :Files<CR>
+:nmap <silent> <C-w> :Windows<CR>
 
 "autocomplete
 "let g:ycm_python_binary_path = 'python'
