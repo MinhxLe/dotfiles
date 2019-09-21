@@ -1,36 +1,57 @@
-#basic programs
-alias ocaml='rlwrap ocaml'
+# programs
 alias sudo="sudo -E"
 alias rm="rm -i"
-alias vim='nvim'
-alias v='nvim'
 
-alias cdg="cd \$(git rev-parse --show-toplevel)"
-alias rmswp='find . -type f -name "*.sw[klmnop]" -delete'
-
-WALLPAPER_PATH=~/Pictures/wallpaper/
-
-#ssh
-alias sshhoffman='ssh minhle@login3.hoffman2.idre.ucla.edu'
-alias sftphoffman='sftp minhle@dtn2.hoffman2.idre.ucla.edu'
-
-alias preview="fzf --preview 'bat --color \"always\" {}'"
+# arc aliases
+alias alint='arc lint'
+alias aunit='arc unit'
+alias adiff='arc diff'
+alias aland='arc land'
 
 #github
 alias gac="git add -A && git commit -m"
 alias gp='git push'
 
-#python venv
-
-alias avenv='virtualenv -p python3 venv'
-alias ivenv='source venv/bin/activate'
-alias rvenv='rm -rf venv'
+function gro {
+  REPO=$1
+  open https://github.com/$REPO
+}
 
 #tools
 alias hfzf='history | fzf'
-alias wifi='nmtui'
 
-#juypter notebook
-j_script() {
-  jupyter nbconvert --to script $1
+#python venv
+alias ivenv='virtualenv -p python venv'
+alias avenv='source venv/bin/activate'
+alias rvenv='rm -rf venv'
+
+#sqitch
+function sqr {
+  sqitch revert $1
+}
+
+function sqd {
+  sqitch deploy $1
+}
+
+#python
+alias python_clr='find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf'
+function pip_install_git {
+  REPO=$1
+  VERSION=$2
+  GIT_PKG='git+ssh://git@github.com/$REPO.git@$VERSION'
+  pip install $GIT_PKG
+}
+
+#docker
+function docker_ssh {
+  docker exec -it $1 bash
+}
+alias docker_ls='docker container list'
+
+
+# random
+wo () {
+  ENV=$1
+  workon $ENV
 }
