@@ -1,0 +1,5 @@
+{
+    "python.jediEnabled": false,
+    "python.venvPath": "~/.virtualenvs",
+    "coc.preferences.jumpCommand": "tab drop"
+}
