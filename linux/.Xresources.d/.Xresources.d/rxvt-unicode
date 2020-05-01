@@ -1,0 +1,11 @@
+URxvt*font: xft:Inconsolata:size=12
+URxvt*boldFont: xft:Inconsolata:size=12
+
+! Bind C-p to use unifont and show 'halfwidth left corner bracket', U+FF62,｢
+URxvt.keysym.C-p: 	command:\033]710;xft:Unifont:pixelsize=20\007
+! Bind C--, C-0(=) and C-+ to activate small, medium, and big font size resp. 
+URxvt.keysym.C-minus: 	command:\033]710;xft:Inconsolata:pixelsize=12\007
+URxvt.keysym.C-0:	command:\033]710;xft:Inconsolata:pixelsize=16\007
+URxvt.keysym.C-plus:	command:\033]710;xft:Inconsolata:pixelsize=20\007
+
+URxvt.scrollBar: false

@@ -1,0 +1,13 @@
+! pallete
+#include "palletes/waves"
+
+config.Pallete.primary1: light1
+config.Pallete.primary2: light2
+config.Pallete.secondary1: dark1
+config.Pallate.secondary2: dark2
+
+! font
+config.Font.normal_font: xft:Inconsolata:size=11 
+config.Font.large_font: xft:Inconsolata:size=14 
+config.Font.small_font: xft:Inconsolata:size=10
+config.Font.bold_font: xft:Inconsolata:size=11

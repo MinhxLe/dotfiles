@@ -29,3 +29,6 @@ ranger
 xbindkey
 tmux
 
+
+# 
+autojump

@@ -1,0 +1,16 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: argb:ffdedee6, argb:ff2a1f28, argb:ff2a1f28
+rofi.color-normal: argb:ffdedee6, #2a1f28, argb:ffdedee6, argb:ff2a1f28, #dedee6
+rofi.color-active: argb:ff3a4356, #dedee6, argb:ff3a4356, argb:ffdedee6, #3a4356
+rofi.color-urgent: argb:ffdedee6, #dc322f, argb:ffdedee6, argb:ffdc322f, #dedee6
+
+!-----sizing------------
+rofi.columns: 3
+
+!rofi.fullscreen : true
+
+!---type---------------
+rofi.modi window,run,ssh
