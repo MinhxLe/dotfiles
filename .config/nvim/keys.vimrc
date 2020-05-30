@@ -19,6 +19,7 @@ exec 'nnoremap <leader>sr :so ' . g:session_dir. '/*.vim<c-d><bs><bs><bs><bs><bs
 exec 'nnoremap <leader>sd :!rm ' . g:session_dir. '/*.vim<c-d><bs><bs><bs><bs><bs>'
 
 " macros
-let @d = 'iimport pdb; pdb.set_trace()'
+let @d = ':s/^/import pdb; pdb.set_trace()/'
 let @s = ':%s/\s\+$//e'
-
+"terminal
+tnoremap <Esc> <C-\><C-n>

@@ -8,12 +8,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'chengzeyi/fzf-preview.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'urbainvaes/vim-ripple'
 "Tagbar
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
@@ -26,6 +28,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-eunuch'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-surround'
+"Plug 'doums/coBra'
 "colorschemes
 Plug 'tomasr/molokai'
 Plug 'flrnd/plastic.vim'
@@ -35,15 +38,15 @@ Plug 'sjl/badwolf'
 Plug 'tlhr/anderson.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'jaredgorski/spacecamp'
+Plug 'jaredgorski/fogbell.vim'
 "Plug 'jupyter-vim/jupyter-vim'
 
 "nvim plugins
-if has('nvim')
     "Plug 'Shougo/deoplete.nvim', {'do' : ':UpdateRemotePlugins'}
-    Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-    Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'dense-analysis/ale'
     "Plug 'zchee/deoplete-jedi'
-endif
 call plug#end()
 """"""""""""""""""""""""""""
 "" Plugins
@@ -56,8 +59,8 @@ map <Leader>f :NERDTreeToggle<CR>
 " airline
 let g:airline_theme = 'gruvbox'
 let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#hunks#enabled = 1 
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -65,35 +68,39 @@ let g:airline#extensions#tabline#enabled = 1
 :nmap <silent> <C-j> :wincmd j<CR>
 
 "fzf
-:nmap <silent> <C-f> :BLines<CR>
+":nmap <silent> <C-b> :BLines<CR>
 :nmap <silent> <C-p> :Files<CR>
 :nmap <silent> <C-t> :Tags<CR>
-:nmap <silent> <C-s> :Rg<CR>
+:nmap <silent> <C-s> :Ag<CR>
+:nmap <silent> <C-b> :Windows<CR>
 set wildmode=list:longest,full
 set wildignore+=*.so,*.swp,*.zip,*.pyg,*.pyc,__pycache__
 let $FZF_DEFAULT_COMMAND =  "ag -g \"\""
 let $FZF_DEFAULT_OPTS=' --layout=reverse  --margin=1,4'
-let g:fzf_layout = { 'window': 'call FloatingFZF()' }
-function! FloatingFZF()
-  let buf = nvim_create_buf(v:false, v:true)
-  call setbufvar(buf, '&signcolumn', 'no')
- 
-  let height = float2nr(30)
-  let width = float2nr(120)
-  let horizontal = float2nr((&columns - width) / 2)
-  let vertical = float2nr((&lines - height) / 2)
- 
-  let opts = {
-        \ 'relative': 'editor',
-        \ 'row': vertical,
-        \ 'col': horizontal,
-        \ 'width': width,
-        \ 'height': height,
-        \ 'style': 'minimal'
-        \ }
- 
-  call nvim_open_win(buf, v:true, opts)
-endfunction
+
+"if has('nvim')
+"    let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+"    function! FloatingFZF()
+"    let buf = nvim_create_buf(v:false, v:true)
+"    call setbufvar(buf, '&signcolumn', 'no')
+    
+"    let height = float2nr(30)
+"    let width = float2nr(120)
+"    let horizontal = float2nr((&columns - width) / 2)
+"    let vertical = float2nr((&lines - height) / 2)
+    
+"    let opts = {
+"            \ 'relative': 'editor',
+"            \ 'row': vertical,
+"            \ 'col': horizontal,
+"            \ 'width': width,
+"            \ 'height': height,
+"            \ 'style': 'minimal'
+"            \ }
+    
+"    call nvim_open_win(buf, v:true, opts)
+"    endfunction
+"endif
 
 " flake8
 "let g:flake8_show_in_file=1

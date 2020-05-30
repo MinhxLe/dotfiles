@@ -17,6 +17,7 @@ set laststatus=2
 set background=dark
 set ruler
 set number
+"set relativenumber 
 nnoremap <leader>c :execute "set colorcolumn=" . (&colorcolumn == "" ? "80" : "")<CR>
 if (has("termguicolors"))
   set termguicolors
@@ -48,9 +49,9 @@ let python_highlight_all=1
 "  :20  :  up to 20 lines of command-line history will be remembered
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
-if !has('nvim')
-  set viminfo='10,\"100,:20,%,n~/.viminfo
-endif
+"if !has('nvim')
+"  set viminfo='10,\"100,:20,%,n~/.viminfo
+"endif
 
 function! ResCur()
   if line("'\"") <= line("$")
@@ -65,3 +66,10 @@ augroup resCur
 augroup END
 
 set listchars=eol:$
+
+" Strip trailing whitespace
+autocmd FileType c,cpp,java,php,javascript,ruby,python autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" splits
+set splitbelow splitright
+set fillchars+=vert:\
