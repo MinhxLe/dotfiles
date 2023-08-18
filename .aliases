@@ -1,0 +1,28 @@
+#
+alias szsh="source ~/.zshrc"
+
+# vim
+alias v="nvim"
+alias vim="nvim"
+
+# git
+
+# python
+alias ptdebug='pytest -n0 -s'
+
+# github
+alias ghv="gh pr view --web"
+
+# graphite
+alias gtbd="gt branch down"
+alias gtbu="gt branch up"
+alias gtbc="gt branch create"
+alias gtbco="gt branch checkout"
+alias gtss="gt stack submit"
+alias gtrs="gt repo sync && git checkout main && gt upstack restack"
+alias gtqs="git add . && git commit -m 'qs' && gtss"
+
+
+# idk
+#  pytest | grep FAILED | sed "s/FAILED \(.*py\)::Test::test.*/\1/g" | sort | uniq
+

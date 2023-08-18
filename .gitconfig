@@ -1,0 +1,5 @@
+[core]
+	excludesFile = ~/.gitignore_global
+[user]
+	name = Minh Le
+	email = minh@usebeam.co
