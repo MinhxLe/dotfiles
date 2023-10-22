@@ -25,11 +25,16 @@ brew install fzf
 # chezmoi init <GIT URL>
 
 
+# dotfiles
+# TODO install dotfiles
+
 # zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # TODO get zshrc
 
 # nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+ln -s ~/.config/nvim_custom/custom ~/.config/nvim/lua/custom
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -51,4 +56,3 @@ brew install --cask 1password/tap/1password-cli
 brew install npm
 npm install typescript --save-dev
 
-# dotfiles

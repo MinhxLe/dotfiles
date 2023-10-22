@@ -26,3 +26,4 @@ alias gtqs="git add . && git commit -m 'qs' && gtss"
 # idk
 #  pytest | grep FAILED | sed "s/FAILED \(.*py\)::Test::test.*/\1/g" | sort | uniq
 
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
