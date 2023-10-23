@@ -1,7 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
+local lspconfig = require("lspconfig")
 
 -- lspconfig.pylsp.setup {
 --   on_attach = on_attach,
@@ -32,28 +32,39 @@ local lspconfig = require "lspconfig"
 --   },
 -- }
 
-lspconfig.pyright.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    reportMissingTypeStubs = true,
-  },
-}
+lspconfig.pyright.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		pyright = {
+			reportMissingTypeStubs = true,
+		},
+	},
+})
+
+lspconfig.tsserver.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		tsserver = {
+			autoImportFileExcludePatterns = { "antd", "react-i18next", "i18next", "cb/src" },
+		},
+	},
+})
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "html",
-  "cssls",
-  "tsserver",
-  "clangd",
-  "bashls",
-  "lua_ls",
-  "terraformls",
+	"html",
+	"cssls",
+	"clangd",
+	"bashls",
+	"lua_ls",
+	"terraformls",
 }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
 end

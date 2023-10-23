@@ -6,24 +6,32 @@ alias v="nvim"
 alias vim="nvim"
 
 # git
+alias gqs="git add . && git commit -m 'qs'"
+alias grs="git pull --rebase origin main"
+alias gbrd="git branch --merged | grep -v main | xargs git branch -d"
 
 # python
 alias ptdebug='pytest -n0 -s'
 
 # github
 alias ghv="gh pr view --web"
+alias ghqs="git commit -am 'qs' && gp"
+
 
 # graphite
-alias gtbd="gt branch down"
-alias gtbu="gt branch up"
-alias gtbc="gt branch create"
-alias gtbco="gt branch checkout"
-alias gtss="gt stack submit"
-alias gtrs="gt repo sync && git checkout main && gt upstack restack"
-alias gtqs="git add . && git commit -m 'qs' && gtss"
+# alias gtbd="gt branch down"
+# alias gtbu="gt branch up"
+# alias gtbc="gt branch create"
+# alias gtbco="gt branch checkout"
+# alias gtss="gt stack submit"
+# alias gtrs="gt repo sync && git checkout main && gt upstack restack"
+# alias gtqs="git add . && git commit -m 'qs' && gtss"
 
 
 # idk
 #  pytest | grep FAILED | sed "s/FAILED \(.*py\)::Test::test.*/\1/g" | sort | uniq
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# terraform
+alias tf="terraform"

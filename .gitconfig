@@ -3,3 +3,5 @@
 [user]
 	name = Minh Le
 	email = minh@usebeam.co
+[push]
+	autoSetupRemote = true
