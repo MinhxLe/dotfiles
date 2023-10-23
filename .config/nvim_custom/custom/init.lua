@@ -8,8 +8,6 @@
 
 local g = vim.g
 
-g.mapleader = "\\"
-
 -- TODO figure out how to modularize
 vim.g.highlightedyank_highlight_duration = 50
 vim.fn.setenv("FZF_DEFAULT_COMMAND", 'ag -g ""')

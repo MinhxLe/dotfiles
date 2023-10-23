@@ -93,7 +93,7 @@ M.pytest = {
     --   end,
     --   "run pytest on current file in buffer",
     -- },
-    ["<leader>pt"] = {
+    ["<leader>rp"] = {
       function()
         vim.cmd ":silent exe \"!tmux send -t 2 'pytest -n0 -s \" . expand('%') .  \" ' Enter\""
       end,
