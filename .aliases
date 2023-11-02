@@ -17,15 +17,7 @@ alias ptdebug='pytest -n0 -s'
 alias ghv="gh pr view --web"
 alias ghqs="git commit -am 'qs' && gp"
 
-
-# graphite
-# alias gtbd="gt branch down"
-# alias gtbu="gt branch up"
-# alias gtbc="gt branch create"
-# alias gtbco="gt branch checkout"
-# alias gtss="gt stack submit"
-# alias gtrs="gt repo sync && git checkout main && gt upstack restack"
-# alias gtqs="git add . && git commit -m 'qs' && gtss"
+alias gg="gqs && gt usr && gt rs && gt ss && gh pr merge --auto -s"
 
 
 # idk
