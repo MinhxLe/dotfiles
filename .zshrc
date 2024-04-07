@@ -116,8 +116,6 @@ if [ -f $HOME/.aliases ]; then
   source $HOME/.aliases
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -125,26 +123,27 @@ export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-# pyenv virtualenvwrapper_lazy
 
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # llvmm
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # homebrew
-export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/opt/homebrew/bin:$PATH"
 
 ## Beam specific stuff
-# nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# aliases
-if [ -f $HOME/.beam_aliases ]; then
-  source $HOME/.beam_aliases
-fi
-
-if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
-  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
-fi
+# # nvm
+# if command -v brew &> /dev/null ; then
+#   export NVM_DIR=~/.nvm
+#   source $(brew --prefix nvm)/nvm.sh
+# fi
+# # aliases
+# if [ -f $HOME/.beam_aliases ]; then
+#   source $HOME/.beam_aliases
+# fi
+#
+# if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+#   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+#   export PATH=`gem environment gemdir`/bin:$PATH
+# fi
