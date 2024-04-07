@@ -120,9 +120,12 @@ fi
 
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+
 eval "$(pyenv init -)"
-pyenv virtualenvwrapper_lazy
+eval "$(pyenv virtualenv-init -)"
+# pyenv virtualenvwrapper_lazy
 
 
 # llvmm
@@ -131,32 +134,17 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
-# git
-git config --global core.excludesFile '~/.gitignore_global'
-
 ## Beam specific stuff
 # nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/minh/.sdkman"
-[[ -s "/Users/minh/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/minh/.sdkman/bin/sdkman-init.sh"
 
 # aliases
 if [ -f $HOME/.beam_aliases ]; then
   source $HOME/.beam_aliases
 fi
 
-if command -v direnv &> /dev/null
-then
-  eval "$(direnv hook zsh)"
-  setopt PROMPT_SUBST
-
-  show_virtual_env() {
-    if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
-      echo "($(basename $VIRTUAL_ENV))"
-    fi
-  }
-  PS1='$(show_virtual_env)'$PS1
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
 fi

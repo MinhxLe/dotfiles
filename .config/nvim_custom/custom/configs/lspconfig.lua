@@ -33,38 +33,38 @@ local lspconfig = require("lspconfig")
 -- }
 
 lspconfig.pyright.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	settings = {
-		pyright = {
-			reportMissingTypeStubs = true,
-		},
-	},
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    python = {
+      pythonPath = vim.fn.exepath("python"),
+    },
+  },
 })
 
 lspconfig.tsserver.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	settings = {
-		tsserver = {
-			autoImportFileExcludePatterns = { "antd", "react-i18next", "i18next", "cb/src" },
-		},
-	},
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    tsserver = {
+      autoImportFileExcludePatterns = { "antd", "react-i18next", "i18next", "cb/src" },
+    },
+  },
 })
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-	"html",
-	"cssls",
-	"clangd",
-	"bashls",
-	"lua_ls",
-	"terraformls",
+  "html",
+  "cssls",
+  "clangd",
+  "bashls",
+  "lua_ls",
+  "terraformls",
 }
 
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-	})
+  lspconfig[lsp].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
 end
