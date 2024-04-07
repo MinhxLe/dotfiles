@@ -105,17 +105,7 @@ local plugins = {
 		"folke/flash.nvim",
 		lazy = false,
 		config = function()
-			require("flash").setup({
-				search = {
-					mode = "fuzzy",
-				},
-				highlight = {
-					{ backdrop = false },
-					groups = {
-						label = "MiniJump2dSpot",
-					},
-				},
-			})
+			require("plugins.configs.flash")
 		end,
 	},
 	-- {
