@@ -105,7 +105,7 @@ local plugins = {
 		"folke/flash.nvim",
 		lazy = false,
 		config = function()
-			require("plugins.configs.flash")
+			require("custom.configs.flash")
 		end,
 	},
 	-- {
