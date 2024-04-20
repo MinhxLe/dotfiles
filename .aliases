@@ -24,6 +24,8 @@ alias gg="gqs && gt usr && gt rs && gt ss && gh pr merge --auto -s"
 #  pytest | grep FAILED | sed "s/FAILED \(.*py\)::Test::test.*/\1/g" | sort | uniq
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots_qs="dots add -u && dots commit -m 'hi' && dots push"
+alias dots_s="dots status -uno"
 
 # terraform
 alias tf="terraform"
