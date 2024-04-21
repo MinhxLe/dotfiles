@@ -97,18 +97,27 @@ M.lspconfig = {
   },
 }
 
+_TMUX_PANE_ID = _TMUX_PANE_ID or nil
+
 M.tmux = {
   n = {
     ["<leader>rr"] = {
       function()
-        pane_number = 2
-        vim.fn.system("tmux send-keys -t " .. pane_number .. " C-p")
-        vim.fn.system("tmux send-keys -t " .. pane_number .. " Enter")
+        if not _TMUX_PANE_ID then
+          local pane_id = vim.fn.input("Enter tmux pane ID: ")
+          _TMUX_PANE_ID = pane_id
+        end
+        vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " C-p Enter")
       end
     },
-    ["rp"] = {
+    ["<leader>rp"] = {
       function()
-        vim.cmd(":silent exe \"!tmux send -t 2 'pytest -s \" . expand('%') .  \" ' Enter\"")
+        if not _TMUX_PANE_ID then
+          local pane_id = vim.fn.input("Enter tmux pane ID: ")
+          _TMUX_PANE_ID = pane_id
+        end
+        local pytest_command = "pytest -s " .. vim.fn.expand("%")
+        vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
       end,
       "run pytest on current file in buffer",
     },
