@@ -112,6 +112,10 @@ local plugins = {
     "Exafunction/codeium.nvim",
     lazy = false,
   },
+  {
+    "jpalardy/vim-slime",
+    lazy = false,
+  }
 }
 
 return plugins
