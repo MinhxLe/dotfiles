@@ -124,16 +124,11 @@ M.tmux = {
   },
 }
 
--- M.codium = {
--- 	i = {
--- 		["<tab>"] = {
--- 			function()
--- 				return vim.fn["codeium#Accept"]()
--- 			end,
--- 			"codium accept",
--- 		},
--- 	},
--- }
+M.python = {
+  n = {
+    ["<leader>pb"] = { "iimport ipdb;ipdb.set_trace()  # noqa<Esc>" }
+  }
+}
 
 M.nvim_treesitter_context = {
   n = {

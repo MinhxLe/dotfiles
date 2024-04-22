@@ -108,10 +108,10 @@ local plugins = {
       require("custom.configs.flash")
     end,
   },
-  -- {
-  --   "Exafunction/codeium.nvim",
-  --   lazy = false,
-  -- },
+  {
+    "Exafunction/codeium.nvim",
+    lazy = false,
+  },
 }
 
 return plugins

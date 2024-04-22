@@ -61,13 +61,13 @@
 /Users/minh/.virtualenvs/cinderblock/lib/python3.10/site-packages/django/db|2.30306|1697832749
 /Users/minh/beam/cinderblock/tests/estimate/views|1.62|1697845096
 /Users/minh/beam/cinderblock/tests/event/test_event.py|3.5885|1686270708
-/Users/minh/Documents/courses/cs234/hw/hw1|11.4814|1713591511
+/Users/minh/Documents/courses/cs234/hw/hw1|11.5685|1713737114
 /Users/minh/beam/cinderblock/tests/agave2/flows/test_outbound_vendor_sync.py|3.14187|1695247150
 /Users/minh/beam/cinderblock/tests/banking/utils.py|4.93735|1697673221
 /Users/minh/beam/cinderblock/tests/client_billing/views/test_new_client_invoice.py|1.24835|1687907312
 /Users/minh/beam/cinderblock/tests/agave2/services/test_bank_account_link_handler_inbound_link.py|2.96307|1692304106
 /Users/minh/beam/cinderblock/tests/billing/views/test_project_expense.py|11.4749|1697066904
-/Users/minh/career/interviews/practice/avent_of_code|10.475|1713719448
+/Users/minh/career/interviews/practice/avent_of_code|12.9594|1713764698
 /Users/minh/beam/cinderblock/tests/banking/services/test_get_estimated_dates_for_source_and_dest_accounts.py|13.448|1696892642
 /Users/minh/beam/cinderblock/manage.py|20.7017|1697832877
 /Users/minh/beam/cinderblock/billing/views/bill_approval_workflow.py|1.07618|1688070824
@@ -200,7 +200,7 @@
 /Users/minh/beam/cinderblock/billing/migrations/0039_remove_invoice_paid_date_and_more.py|1.19575|1691180460
 /Users/minh/beam/cinderblock/billing/services.py|5.09439|1697753445
 /Users/minh/beam/cinderblock/page_resources|1.12666|1690314204
-/Users/minh/career/interviews|6.58757|1713494256
+/Users/minh/career/interviews|6.88775|1713760805
 /Users/minh/beam/cinderblock/tests/billing/views/test_untyped_bill.py|4.25412|1687546489
 /Users/minh/beam/mosaic/src/modules/project-detail/SupView/components/DesktopView/index.tsx|1.07618|1682637464
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_scheduled_invoice_payment_creation_consumer.py|2.60191|1691082728
@@ -215,7 +215,7 @@
 /Users/minh/beam/cinderblock/schema/generators.py|1.18098|1694015230
 /Users/minh/beam/cinderblock/tests/billing/views/test_schedule_of_values_item_progress_summary.py|2.49308|1696619711
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_client_invoice_approval_state_change_consumer.py|1.96718|1686685160
-/Users/minh/Documents/courses/cs234/hw/hw1/hw1.md|2.5|1713335390
+/Users/minh/Documents/courses/cs234/hw/hw1/hw1.md|2.9|1713737114
 /Users/minh/Documents/courses/cs224r/hw1/cs224r_hw1_2022.pdf|1.8|1712883727
 /Users/minh/career/interviews/imbue/test.py|8.91974|1712967622
 /Users/minh/.local/share/nvim/lazy|2.25|1712128519
@@ -226,7 +226,8 @@
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_invoice_embedded_file_creation_consumer.py|3.77579|1695246602
 /Users/minh/beam/cinderblock/common/views/rest_view_set.py|3.51495|1697836887
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_rejection.py|3.83966|1687989246
-/Users/minh/project/minhxle.github.io|14.2343|1712128333
+/Users/minh/career/interviews/practice/brainstellar|4.56988|1713762221
+/Users/minh/project/minhxle.github.io|15.0556|1713760798
 /Users/minh/beam/cinderblock/tests/agave2/services/test_vendor_link_handler_inbound_link.py|2.6247|1686869539
 /Users/minh/References/python/protocol|1.86799|1686153010
 /Users/minh/project/minhxle.github.io/pages/_posts|1.8|1711175184
@@ -339,6 +340,7 @@
 /Users/minh/Downloads/nvim_custom_bak|1.39681|1680971554
 /Users/minh/project/minhxle.github.io/404.html|1.8|1711175954
 /Users/minh/beam/cinderblock/agave2/migrations/0015_vendorlink_ledgeraccountlink_itemlink_apinvoicelink_and_more.py|1.07618|1685128419
+/Users/minh/career/interviews/practice/avent_of_code/test_fertilizer.py|4.7887|1713762467
 /Users/minh/beam/cinderblock/tests/billing/utils.py|5.38195|1697730060
 /Users/minh/beam/mosaic/apps/web/src/components/forms/SchedulePaymentForm/useSchedulePayment/index.tsx|1.18098|1693260588
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_approval_workflow.py|4.16562|1688767093
@@ -418,7 +420,7 @@
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_workflow_action_admin_approval.py|3.48288|1688523668
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_ap_invoice_payment_handler_outbound_link.py|1.65061|1687213684
 /Users/minh/.fzf.zsh|1.06288|1692332737
-/Users/minh/career/interviews/practice|3.55301|1713494281
+/Users/minh/career/interviews/practice|4.33944|1713760814
 /Users/minh/beam/cinderblock/tests/page_resources/views/test_bill_list_row.py|13.3428|1697061429
 /Users/minh/beam/cinderblock/Justfile|1.67902|1690314204
 /Users/minh/beam/cinderblock/business/views.py|1.52947|1689991560
@@ -438,7 +440,7 @@
 /Users/minh/beam/cinderblock|118.969|1697992657
 /Users/minh/beam/cinderblock/tests/billing/views/test_get_subcontractor_project_progress_summary.py|2.45593|1690241913
 /Users/minh/References/python/fn.py/setup.py|1.96718|1686807601
-/Users/minh/.gitignore_global|1|1713679409
+/Users/minh/.gitignore_global|2|1713722835
 /Users/minh/beam/cinderblock/minh_ignore/blah.py|2.15274|1696521208
 /Users/minh/beam/mosaic/apps/web/src/modules/client-invoice-detail/GCView/components/ActivityLog|1.18098|1693933319
 /Users/minh/beam/mosaic/lint|2.83109|1685049031
