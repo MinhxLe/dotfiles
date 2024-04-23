@@ -5,8 +5,11 @@ flash.setup({
 	search = {
 		mode = "fuzzy",
 	},
+	label = {
+		rainbow = { enabled = true },
+	},
 	highlight = {
-		{ backdrop = false },
+		backdrop = true,
 		groups = {
 			label = "MiniJump2dSpot",
 		},

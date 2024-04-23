@@ -124,6 +124,8 @@ export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # llvmm
@@ -133,6 +135,8 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # export PATH="/opt/homebrew/bin:$PATH"
 
 ## Beam specific stuff
+
+export WORKON_HOME=$HOME/.virtualenvs
 # # nvm
 # if command -v brew &> /dev/null ; then
 #   export NVM_DIR=~/.nvm
