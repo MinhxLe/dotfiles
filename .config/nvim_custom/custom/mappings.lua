@@ -1,6 +1,8 @@
 ---@type MappingsTable
 local M = {}
 
+local utils = require("custom.utils")
+
 M.general = {
 	n = {
 		[";"] = { ":", "enter command mode", opts = { nowait = true } },
@@ -97,17 +99,11 @@ M.lspconfig = {
 	},
 }
 
-_TMUX_PANE_ID = _TMUX_PANE_ID or nil
-
 M.tmux = {
 	n = {
 		["<leader>rr"] = {
 			function()
-				if not _TMUX_PANE_ID then
-					local pane_id = vim.fn.input("Enter tmux pane ID: ")
-					_TMUX_PANE_ID = pane_id
-				end
-				vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " C-p Enter")
+				utils.send_to_tmux_pane("C-p")
 			end,
 		},
 	},
@@ -116,6 +112,20 @@ M.tmux = {
 M.python = {
 	n = {
 		["<leader>pb"] = { "iimport ipdb;ipdb.set_trace()  # noqa<Esc>" },
+		["<leader>rp"] = {
+			function()
+				local pytest_command = "pytest -s " .. vim.fn.expand("%")
+				utils.send_to_tmux_pane(pytest_command)
+			end,
+			"run pytest on current file in buffer",
+		},
+		["<leader>rpu"] = {
+			function()
+				local pytest_command = "pytest -s " .. vim.fn.expand("%") .. " -k " .. utils.get_python_function_name()
+				utils.send_to_tmux_pane(pytest_command)
+			end,
+			"run pytest of current test on current file in buffer",
+		},
 	},
 }
 
@@ -125,31 +135,6 @@ M.nvim_treesitter_context = {
 			function()
 				require("treesitter-context").go_to_context()
 			end,
-		},
-		["<leader>rp"] = {
-			function()
-				if not _TMUX_PANE_ID then
-					local pane_id = vim.fn.input("Enter tmux pane ID: ")
-					_TMUX_PANE_ID = pane_id
-				end
-				local pytest_command = "pytest -s " .. vim.fn.expand("%")
-				vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
-			end,
-			"run pytest on current file in buffer",
-		},
-		["<leader>rpu"] = {
-			function()
-				if not _TMUX_PANE_ID then
-					local pane_id = vim.fn.input("Enter tmux pane ID: ")
-					_TMUX_PANE_ID = pane_id
-				end
-				local pytest_command = "pytest -s "
-					.. vim.fn.expand("%")
-					.. " -k "
-					.. require("custom.utils").get_python_function_name()
-				vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
-			end,
-			"run pytest of current test on current file in buffer",
 		},
 	},
 }
