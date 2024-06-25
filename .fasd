@@ -123,7 +123,7 @@
 /Users/minh/Downloads/bills/tmp.pdf|3.55301|1718123921
 /Users/minh/beam/cinderblock/minh_ignore/backtest/minh_ignore/backtest/data|1|1717724103
 /Users/minh/beam/cinderblock/billing/views/scheduled_invoice_payment.py|1.30666|1691025196
-/Users/minh/.aliases|3.2396|1719260622
+/Users/minh/.aliases|4.33563|1719340767
 /Users/minh/yes.pub|1.3122|1712387154
 /Users/minh/beam/cinderblock/common|1.10236|1696361682
 /Users/minh/beam/cinderblock/tests/business/views|1.18098|1697845096
@@ -161,7 +161,7 @@
 /Users/minh/beam/cinderblock/cookiecutter_templates|2.90175|1718318738
 /Users/minh/Documents/courses/cs234/hw/hw1/assignment1_template|4.68095|1713591465
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_line_item_work_completed_source_link.py|1.458|1714004390
-/Users/minh/beam/mosaic|67.1718|1719333607
+/Users/minh/beam/mosaic|67.3357|1719358370
 /Users/minh/beam/cinderblock/tests/budgeting/views/test_project_budget.py|7.64801|1716249034
 /Users/minh/beam/cinderblock/tests/daemons/test_sla_job.py|1.96487|1683074756
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_create_customers.py|1.36176|1684271126
@@ -186,7 +186,7 @@
 /Users/minh/beam/cinderblock/tests/billing/views/test_billing_approval_action.py|6.76289|1688064941
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice.py|10.0533|1714501192
 /Users/minh/beam/mosaic/packages/cb/src/generated|2.56532|1718150221
-/Users/minh/beam/cinderblock/tests/compliance/views/test_compliance_status.py|6.57679|1719263683
+/Users/minh/beam/cinderblock/tests/compliance/views/test_compliance_status.py|7.70807|1719338927
 /Users/minh/beam/cinderblock/tests/billing/__pycache__|1.36176|1689890295
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_initiate_outbound_client_invoice_payments.py|2.51244|1695331343
 /Users/minh/beam/cinderblock/tests/billing/views/test_bill_approval_actions_approve.py|1.20329|1687986655
@@ -200,7 +200,7 @@
 /Users/minh/beam/cinderblock/tests/billing/flows|1.36176|1689890295
 /Users/minh/beam/cinderblock/tests/billing/views/test_get_invoice_payment_initiation_date.py|1.56827|1681948598
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_push_ar_invoices_to_agave.py|2.83429|1684366031
-/tmp/bilss|2.9|1719273345
+/tmp/bilss|3.24483|1719358378
 /Users/minh/project/receipt|5.87794|1705789888
 /Users/minh/project/minhxle.github.io/Gemfile|1.64025|1711175954
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_transaction_state_change_consumer.py|6.68454|1697048443
@@ -469,7 +469,7 @@
 /Users/minh/beam/cinderblock/tests/client_billing/views/test_client_invoice.py|2.65367|1687310042
 /Users/minh/beam/cinderblock/billing/daemons.py|2.99295|1697747128
 /Users/minh/beam/cinderblock/tests/coi/views|1.18098|1697845096
-/Users/minh/beam/cinderblock|125.575|1719335567
+/Users/minh/beam/cinderblock|126.055|1719353245
 /Users/minh/beam/cinderblock/tests/oauth/views/test_account.py|4.66147|1715039185
 /Users/minh/beam/cinderblock/tests/billing/views/test_get_subcontractor_project_progress_summary.py|1.79038|1690241913
 /Users/minh/References/python/fn.py/setup.py|1.43407|1686807601
