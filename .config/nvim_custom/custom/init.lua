@@ -39,3 +39,6 @@ vim.cmd("let $FZF_DEFAULT_OPTS = '--bind tab:down,shift-tab:up'")
 vim.api.nvim_create_user_command("UpdateTmuxPaneId", function(opts)
 	_TMUX_PANE_ID = opts.args
 end, { nargs = 1 })
+
+vim.g.slime_target = "tmux"
+vim.g.slime_bracketed_paste = 1

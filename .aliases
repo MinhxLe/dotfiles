@@ -7,9 +7,30 @@ alias vim="nvim"
 
 # git
 alias gqs="git add . && git commit -m 'qs'"
-alias grs="git pull --rebase origin main"
-alias gbrd="git branch --merged | grep -v main | xargs git branch -d"
+# alias grs="git pull --rebase origin main"
+# alias gbrd="git branch --merged | grep -v main | xargs git branch -d"
 
+alias gc="git checkout -B"
+alias gusr="git pull origin main && git rebase main --update-refs"
+alias gco='git checkout $(git branch --all | rg -v remote | rg -e ml -e main | fzf) && gusr'
+export function delete_branch_and_close_pr() {
+    local branch=$1
+
+    # Delete local branch
+    git branch -D "$branch"
+    echo "Local branch '$branch' deleted."
+
+    # Find the pull request associated with the branch and close it
+    local pr_number=$(gh pr list --head "$branch" --json number --jq '.[0].number' | tr -d '"')
+    if [[ -n "$pr_number" ]]; then
+        gh pr close "$pr_number"
+        echo "Pull request #$pr_number associated with branch '$branch' closed."
+    else
+        echo "No open pull request found for branch '$branch' on '$remote'."
+    fi
+}
+alias gdl='delete_branch_and_close_pr $(git branch --all | rg -v remote | rg -e ml -e main | fzf)'
+alias gss='git push && gh pr create'
 # python
 alias ptdebug='pytest -n0 -s'
 
