@@ -15,10 +15,51 @@ alias gqs="git add . && git commit --amend"
 alias ptdebug='pytest -n0 -s'
 
 # github
-alias ghv="gh pr view --web"
-alias ghqs="git commit -am 'qs' && gp"
+alias gqs="git add . && git commit -m 'qs'"
+# alias grs="git pull --rebase origin main"
+# alias gbrd="git branch --merged | grep -v main | xargs git branch -d"
+alias gc="git checkout -B"
+alias gusr="git pull origin main && git rebase main --update-refs"
+alias gco='git checkout $(git branch --all | rg -v remote | rg -e ml -e main | fzf) && gusr'
+export function delete_branch_and_close_pr() {
+    local branch=$1
+    # Delete local branch
+    git branch -D "$branch"
+    echo "Local branch '$branch' deleted."
+    # Find the pull request associated with the branch and close it
+    local pr_number=$(gh pr list --head "$branch" --json number --jq '.[0].number' | tr -d '"')
+    if [[ -n "$pr_number" ]]; then
+        gh pr close "$pr_number"
+        echo "Pull request #$pr_number associated with branch '$branch' closed."
+    else
+        echo "No open pull request found for branch '$branch' on '$remote'."
+    fi
+}
 
-alias gg="gqs && gt usr && gt rs && gt ss && gh pr merge --auto -s"
+function delete_merged_or_closed_branch() {
+    local branch=$1
+
+    # Check if the local branch is tracking a remote branch
+    local remote_branch=$(git for-each-ref --format='%(upstream:short)' refs/heads/"$branch")
+    echo $remote_branch
+    if [[ -n "$remote_branch" ]]; then
+        # Check the status of the PR associated with each branch
+        local pr_state=$(gh pr view "$branch" --json state --jq .state)
+        # If the PR is merged or closed, delete the remote branch and its local counterpart
+        if [[ "$pr_state" == "MERGED" || "$pr_state" == "CLOSED" ]]; then
+            # Delete local branch
+            git branch -D "$branch"
+            echo "Deleted local branch $branch"
+            # Delete the remote branch
+            # git push origin --delete "${branch}"
+            echo "Deleted branch $branch as its PR is $pr_state."
+        fi
+    fi
+}
+
+alias grs="delete_merged_or_closed_pr_branches"
+alias gdl='delete_branch_and_close_pr $(git branch --all | rg -v remote | rg -e ml -e main | fzf)'
+alias gss='git push && gh pr create'
 
 
 # idk
