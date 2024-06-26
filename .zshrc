@@ -151,3 +151,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 #   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 #   export PATH=`gem environment gemdir`/bin:$PATH
 # fi
+source '/opt/homebrew/opt/autoenv/activate.sh'

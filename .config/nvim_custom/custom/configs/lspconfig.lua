@@ -31,7 +31,7 @@ local lspconfig = require("lspconfig")
 --     },
 --   },
 -- }
-
+-- before this was basedpyright
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -68,3 +68,8 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   })
 end
+
+require('lean').setup {
+  lsp = { on_attach = on_attach },
+  mappings = true,
+}
