@@ -14,4 +14,9 @@ flash.setup({
 			label = "MiniJump2dSpot",
 		},
 	},
+	modes = {
+		search = {
+			enabled = true,
+		},
+	},
 })
