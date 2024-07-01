@@ -20,8 +20,8 @@ alias tf="terraform"
 
 # git/github
 
-function gusr {
-  git pull origin main && git rebase main --update-refs
+function gtrs {
+  git fetch origin main:main && git rebase main --update-refs
 }
 
 function _fuzzy_branch() {
@@ -81,5 +81,23 @@ export function gtbdl() {
   git branch -D "$branch"
 }
 
+export function gtusr() {
+  gtbco main
+
+  # Get a list of local branches
+  local branches=$(git branch --format "%(refname:short)")
+
+  echo "$branches" | while read -r branch; do
+    if [[ "$branch" != "main" ]]; then
+      echo "Deleting $branch"
+      # Check if the branch has a closed or merged PR
+      local pr_state=$(gh pr list --state merged --state closed --head "$branch" --json state -q '.[0].state')
+      echo $pr_state
+      if [[ "$pr_state" == "CLOSED" || "$pr_state" == "MERGED" ]]; then
+        gtbdl $branch
+      fi
+    fi
+  done
+}
 # TODO syncing
 # TODO stack
