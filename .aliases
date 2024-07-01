@@ -89,11 +89,11 @@ export function gtusr() {
 
   echo "$branches" | while read -r branch; do
     if [[ "$branch" != "main" ]]; then
-      echo "Deleting $branch"
       # Check if the branch has a closed or merged PR
       local pr_state=$(gh pr list --state merged --state closed --head "$branch" --json state -q '.[0].state')
       echo $pr_state
       if [[ "$pr_state" == "CLOSED" || "$pr_state" == "MERGED" ]]; then
+        echo "Deleting $branch"
         gtbdl $branch
       fi
     fi
