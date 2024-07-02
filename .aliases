@@ -13,17 +13,10 @@ alias ptdebug='pytest -n0 -s'
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dots_qs="dots add -u && dots commit -m 'hi' && dots push"
-alias dots_s="dots status -uno"
-
 # terraform
 alias tf="terraform"
 
 # git/github
-
-function gtrs {
-  git fetch origin main:main && git rebase main --update-refs
-}
-
 function _fuzzy_branch() {
   git branch --all | rg -v remote | rg -v "\*" | rg -e ml -e main | awk '{print $1}' | fzf
 }
@@ -79,6 +72,20 @@ export function gtbdl() {
   # Delete the local branch
   git checkout main
   git branch -D "$branch"
+}
+
+function gtrs {
+  local branch=$(git branch --show-current)
+  if [[ "$branch" != "main" ]]; then
+    # Check if the branch has a closed or merged PR
+    local pr_state=$(gh pr list --state merged --state closed --head "$branch" --json state -q '.[0].state')
+    if [[ "$pr_state" == "CLOSED" || "$pr_state" == "MERGED" ]]; then
+      echo "Deleting $branch"
+      gtbdl $branch
+    else
+      git fetch origin main:main && git rebase main --update-refs
+    fi
+  fi
 }
 
 export function gtusr() {
