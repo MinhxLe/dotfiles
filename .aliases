@@ -90,6 +90,7 @@ function gtrs {
 
 export function gtusr() {
   gtbco main
+  git pull
 
   # Get a list of local branches
   local branches=$(git branch --format "%(refname:short)")
