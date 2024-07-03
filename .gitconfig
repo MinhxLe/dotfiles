@@ -5,3 +5,5 @@
 	email = minh.d.le27@gmail.com
 [push]
 	autoSetupRemote = true
+[init]
+	defaultBranch = main

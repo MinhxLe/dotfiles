@@ -5,11 +5,13 @@
 /Users/minh/beam/cinderblock/minh_ignore/bill_samples/adf8abca-4cb9-4401-94aa-8d84cf4a7a9b.pdf|2.5|1719943863
 /Users/minh/beam/cinderblock/tests/project/views/test_subcontract.py|2.93122|1687903361
 /Users/minh/beam/cinderblock/tests/billing|2.07663|1697844624
+/Users/minh/project/music_share/path|1|1719983011
 /Users/minh/references/python/lavague|3.68573|1719103972
 /Users/minh/beam/cinderblock/billing/views/invoice_line_item.py|2.33114|1714146740
 /Users/minh/beam/cinderblock/external/stripe|1|1719847882
 /Users/minh/beam/cinderblock/tests/billing/test_models.py|1.6238|1697064647
 /Users/minh/homie/meetrics/src/__init__.py|2.25|1719084260
+/Users/minh/project/python_project_template/basic_python_project|3.55301|1719969289
 /Users/minh/beam/cinderblock/agave2/models.py|1.81349|1686868752
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_initiate_inbound_invoice_payments.py|5.54409|1695253898
 /Users/minh/career/interviews/practice/avent_of_code/reflection_13.txt|1.62|1716666350
@@ -18,6 +20,7 @@
 /Users/minh/career/leetcode/3040.py|2.41821|1712811670
 /Users/minh/beam/cinderblock/tests/billing/views/test_prime_contract_invoice.py|4.66385|1695141389
 /Users/minh/beam/cinderblock/banking/daemons.py|1.52947|1695945939
+/Users/minh/project/music_share/main.py|1|1719979556
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_approval_details.py|1.72207|1688165671
 /Users/minh/beam/cinderblock/tests/banking/daemons/test_send_microdeposit_verification_reminders.py|1|1719862050
 /Users/minh/beam/cinderblock/tests/agave2/services/test_customer_link_handler.py|1.15662|1686790789
@@ -52,9 +55,11 @@
 /Users/minh/career/interviews/practice/avent_of_code/dish_14.txt|1.62|1716666350
 /Users/minh/beam/mosaic/apps/web/src/modules/bill-detail/ClientView/useAddClientBankAccountAndPayInvoice/index.tsx|1.32861|1697755134
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_create_or_update_transactions_for_payments.py|5.01704|1695690652
+/Users/minh/project/templates/python_webapp/cookiecutter.json|1|1719979295
 /Users/minh/references/python/override_import|4.39425|1708575129
 /Users/minh/career/interviews/imbue/interview2/polygon.py|2.12894|1714336145
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_workflow_action_creation_consumer.py|3.44725|1691085076
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/_cookiecutter_templates/app/{{cookiecutter.app_name}}/models.py|1|1719971200
 /Users/minh/beam/cinderblock/tests/transfers/views|1.06288|1697845096
 /Users/minh/beam/cinderblock/tests/billing/daemons/create_transactions_for_scheduled_payments.py|4.34079|1695674279
 /Users/minh/References/python/abc|2.13971|1687885962
@@ -75,26 +80,32 @@
 /Users/minh/career/interviews/practice/avent_of_code|22.1122|1716666544
 /Users/minh/beam/cinderblock/tests/banking/services/test_get_estimated_dates_for_source_and_dest_accounts.py|8.82325|1696892642
 /Users/minh/beam/cinderblock/manage.py|14.5955|1719947642
+/Users/minh/project/python_project_template/cookiecutter.json|1|1719969155
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}|20.258|1719988197
 /Users/minh/career/interviews/practice/avent_of_code/python/fertilizer.txt|1.62|1716666425
-/Users/minh/project/python_project_template/{{cookiecutter.project_name}}|3.45101|1718774797
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/_cookiecutter_templates/app/{{cookiecutter.app_name}}|3.55301|1719971206
+/Users/minh/project/python_project_template/{{cookiecutter.project_name}}|4.0081|1719969167
 /Users/minh/beam/cinderblock/agave2/services.py|2.67891|1696349315
 /Users/minh/beam/cinderblock/common/track_models.py|1.32861|1697839670
 /Users/minh/beam/cinderblock/tests/banking/test_models.py|1.01828|1691512697
+/Users/minh/project/templates/basic_python_project/{{cookiecutter.project_name}}|3.24483|1719969569
 /Users/minh/career/interviews/practice/avent_of_code/python|4.21007|1716666440
 /Users/minh/beam/cinderblock/banking/migrations/0025_remove_transactionaccount_type_match_linked_underlying_account_and_more.py|1.12352|1694648871
 /Users/minh/beam/cinderblock/tests/billing/views/test_bill_approval_actions_set_pending.py|1.22558|1687986662
+/Users/minh/project/templates/basic_python_project/{{cookiecutter.project_name}}/setup.py|1|1719969409
 /Users/minh/career/interviews/practice/avent_of_code/python/galaxy_11.txt|1.62|1716666425
 /Users/minh/beam/cinderblock/tests/agave2/services/test_ledger_account_handler_inbound_link.py|1.29066|1687212722
 /Users/minh/project/references/pddl|4.06457|1715746517
 /Users/minh/career/interviews/practice/avent_of_code/pipe_10.txt|1.62|1716666350
 /Users/minh/homie/meetrics/pgvector|2.25|1719388255
-/Users/minh/project/fnode|5.77895|1718084166
-/Users/minh/Documents/courses/cs224r/hw1/requirements.txt|1.18098|1712883804
 /Users/minh/career/interviews/practice/avent_of_code/pipe_10.py|3.4099|1716666329
+/Users/minh/Documents/courses/cs224r/hw1/requirements.txt|1.18098|1712883804
+/Users/minh/project/fnode|5.77895|1718084166
 /Users/minh/beam/terraform/scripts/get_bastion_ip.py|1.76838|1686345268
 /Users/minh/Documents/courses/cs224r/hw1|3.18276|1712883895
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_create_vendors.py|5.56579|1683847252
 /Users/minh/beam/cinderblock/tests/project/views/test_prime_contract_milestone.py|1.22558|1685398659
+/Users/minh/project/music_share/requirements.txt|1|1719979486
 /Users/minh/.zshrc|3.30795|1712513998
 /Users/minh/beam/cinderblock/tests/agave2/views/test_client_invoice_outbound_sync.py|2.1454|1697677024
 /Users/minh/References/python/singleton|1.67442|1683061809
@@ -105,6 +116,7 @@
 /Users/minh/career/interviews/practice/avent_of_code/camel_card.txt|1.62|1716666350
 /Users/minh/beam/cinderblock/tests/billing/views/test_get_agave_link_token.py|2.79113|1683318011
 /Users/minh/tmp/main.py|1.47623|1706080827
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/foo|3.83446|1719975981
 /Users/minh/beam/cinderblock/billing/client_billing_views.py|2.63255|1697730399
 /Users/minh/beam/mosaic/apps/web/src/features/balance/utils.ts|1.06288|1697823551
 /Users/minh/beam/cinderblock/tests/banking/services/test_get_estimated_dates_for_source_and_dest_types.py|1.54118|1697566673
@@ -113,11 +125,13 @@
 /Users/minh/auth.py|1.18098|1712387154
 /Users/minh/career/interviews/practice/avent_of_code/fertilizer.py|2.17424|1716666329
 /Users/minh/beam/cinderblock/billing/views/scheduled_invoice_payment.py|1.17599|1691025196
-/Users/minh/.aliases|7.40111|1719963875
+/Users/minh/.aliases|8.05367|1719983057
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/web|1|1719971907
 /Users/minh/yes.pub|1.18098|1712387154
 /Users/minh/beam/cinderblock/tests/business/views|1.06288|1697845096
 /Users/minh/beam/cinderblock/billing/views/untyped_invoice.py|1.00348|1688165167
 /Users/minh/beam/cinderblock/tests/billing/views/test_contract_progress_summary.py|1.87277|1697061293
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/api|1|1719974197
 /Users/minh/desktop|1.18098|1709091499
 /Users/minh/beam/cinderblock/cinderblock|8.82074|1719955363
 /Users/minh/beam/cinderblock/banking/models.py|2.40629|1697750031
@@ -142,7 +156,7 @@
 /Users/minh/beam/cinderblock/tests/agave2/utils.py|1.00348|1686950060
 /Users/minh/beam/terraform/scripts/deploy_cinderblock.sh|1.89844|1691438872
 /Users/minh/beam/cinderblock/tests/email/test_instances.py|9.14257|1719858622
-/Users/minh/homie/meetrics|40.7803|1719542623
+/Users/minh/homie/meetrics|40.9028|1719979063
 /Users/minh/beam/cinderblock/billing/views/invoice_payment.py|2.75161|1697745773
 /Users/minh/beam/cinderblock/tests/billing/views/test_subcontract_bill.py|3.00607|1694276950
 /Users/minh/beam/cinderblock/billing/migrations/0011_payerapprovalworkflow_and_more.py|1.10161|1691180389
@@ -157,7 +171,7 @@
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_create_customers.py|1.22558|1684271126
 /Users/minh/beam/cinderblock/minh_ignore/serializer.py|1.41144|1687276621
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_create_ap_invoices_from_invoices.py|2.45464|1685398534
-/Users/minh/.config/nvim|10.2108|1719297624
+/Users/minh/.config/nvim|10.6914|1719988190
 /Users/minh/career/interviews/practice/avent_of_code/galaxy_11.py|1.62|1716666329
 /Users/minh/beam/terraform/scripts|1.15662|1685655906
 /Users/minh/beam/cinderblock/ocr/openai_shapes.py|1|1719847882
@@ -171,6 +185,7 @@
 /Users/minh/tmp/distribution.py|1.71242|1706081532
 /Users/minh/beam/cinderblock/tests/onboarding/daemons/test_onboarding_flow_updated.py|2.45959|1691514429
 /Users/minh/beam/cinderblock/tests/billing/views/test_mark_paid_externally.py|2.96528|1691097914
+/Users/minh/secrets|1|1719985677
 /Users/minh/.vscode/extensions/ms-python.python-2024.2.1/pythonFiles/printEnvVariablesToFile.py|1.458|1715921773
 /Users/minh/Documents/courses/cs234/hw/hw1/CS234_A1.pdf|2.51579|1713591511
 /Users/minh/beam/cinderblock/ocr/daemons.py|1|1719847882
@@ -192,6 +207,7 @@
 /Users/minh/beam/cinderblock/external/slack|1|1719847882
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_progress_ap_invoice_link.py|3.06486|1686939926
 /Users/minh/career/interviews/practice/avent_of_code/wasteland_8.txt|1.62|1716666350
+/Users/minh/project/music_share/external/spotify|2|1719983061
 /Users/minh/beam/cinderblock/billing/views/prime_contract_invoice.py|1.01129|1693496147
 /Users/minh/beam/cinderblock/tests/billing/views/test_untyped_invoice.py|1.90042|1687907935
 /Users/minh/beam/cinderblock/external/sentry|1|1719847882
@@ -216,6 +232,7 @@
 /Users/minh/beam/cinderblock/tests/billing/flows/test_gc_sub_invoice_payment_flow.py|2.76405|1695338609
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_approval_action.py|1.67075|1714077556
 /Users/minh/Documents/courses/cs234/cs_234hw/hw2/code/results/results-cartpole.png|2.025|1716696573
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/_cookiecutter_templates/app/{{cookiecutter.app_name}}/db|1|1719971200
 /Users/minh/beam/cinderblock/external/hubspot|1|1719847882
 /Users/minh/beam/cinderblock/tests/ocr/services/test_bill_intent_ocr_dag.py|5.13472|1719876533
 /Users/minh/career/interviews/cursor/cursor-streaming-markdown-problem-starter/dist/index.html|1.62|1716672574
@@ -248,6 +265,7 @@
 /Users/minh/beam/cinderblock/tests/billing/views/test_project_expense_receipt_embedded_file.py|1.01117|1691780872
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_ap_invoice_payment.py|4.33346|1697677785
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_invoice_embedded_file_creation_consumer.py|2.47729|1695246602
+/Users/minh/project/templates/python_webapp|10.1831|1719987747
 /tmp/pgvector|1.8|1719382543
 /Users/minh/beam/cinderblock/common/views/rest_view_set.py|2.30615|1697836887
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_rejection.py|2.5192|1687989246
@@ -257,6 +275,7 @@
 /Users/minh/career/interviews/practice/avent_of_code/python/camel_card.txt|1.62|1716666425
 /Users/minh/beam/cinderblock/tests/agave2/services/test_vendor_link_handler_inbound_link.py|1.72207|1686869539
 /Users/minh/References/python/protocol|1.22558|1686153010
+/Users/minh/.secrets/OPENAI_KEY|2|1719985989
 /Users/minh/project/minhxle.github.io/pages/_posts|1.18098|1711175184
 /Users/minh/project/scrapping|1.8|1718774247
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_client_invoice_creation_consumer.py|1.4473|1695246609
@@ -272,13 +291,14 @@
 /Users/minh/beam/cinderblock/tests/banking/views|2.30615|1697845096
 /Users/minh/project/puzzles/polygon.py|1.8225|1715746880
 /Users/minh/beam/cinderblock/tests/project/views/test_subcontract_embedded_file.py|1.22558|1687905925
-/Users/minh/project|11.3415|1719038820
+/Users/minh/project|13.2962|1719979449
 /Users/minh/project/minhxle.github.io/pages/Gemfile|1.18098|1711175157
 /Users/minh/beam/cinderblock/minh_ignore/bill_samples/c358284f-e286-4ecf-8652-6b49084f107e.pdf|1|1719944162
 /Users/minh/beam/cinderblock/banking/views.py|1.50275|1691514023
 /Users/minh/career/interviews/extropic|3.2923|1712432185
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_check_businesses_ready_for_inbound_payments.py|2.34378|1694716260
 /Users/minh/Documents/courses/cs234/cs_234hw/hw2/requirements.txt|2.1141|1715056948
+/Users/minh/project/templates|9.14257|1719979378
 /Users/minh/beam/cinderblock/tests/billing/views/test_get_invoice_approval_workflow_requirements.py|1.08296|1688670956
 /Users/minh/references|3.05255|1719038830
 /Users/minh/career/interviews/imbue/interview2/flea.md|1.458|1714489383
@@ -295,11 +315,13 @@
 /Users/minh/scripts|1.18098|1711165541
 /Users/minh/beam/cinderblock/minh_ignore/bill_samples/2eed4119-ed78-4022-8aa2-77cd3840ccaf.pdf|1|1719941774
 /Users/minh/project/construction_scraping|10.0943|1719038817
+/Users/minh/project/templates/core_python_project|1|1719969966
 /Users/minh/beam/cinderblock/tests/banking/test_invite_merge.py|1.73976|1713996762
 /Users/minh/beam/cinderblock/banking/services.py|3.0962|1697752895
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_create_cost_codes_from_items.py|2.28512|1684210874
 /Users/minh/beam/cinderblock/schema|3.24292|1719613084
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_workflow_action_admin_approval_required.py|2.41992|1691000974
+/Users/minh/homie/meetrics/cookiecutter_templates|2|1719971120
 /Users/minh/career/interviews/cursor/takehome|5.91689|1716670418
 /Users/minh/Documents/courses/cs234/cs_234hw|3.16345|1715147882
 /Users/minh/beam/cinderblock/tests/business/views/test_get_agave_link_token.py|1.08296|1683326666
@@ -313,6 +335,7 @@
 /Users/minh/project/puzzles/problem.md|1.8225|1715746880
 /Users/minh/career/interviews/cursor/cursor-streaming-markdown-problem-starter|5.45036|1716874437
 /Users/minh/beam/cinderblock/tests/billing/views/test_project_progress_summary.py|1.73133|1690242399
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/main.py|2.9|1719979017
 /Users/minh/beam/cinderblock/minh_ignore/failed_tests.txt|1.85624|1692293125
 /Users/minh/beam/cinderblock/tests/banking/views/test_bank_account.py|1.67389|1694568151
 /Users/minh/project/minhxle.github.io/_config.yml|1.18098|1711175954
@@ -353,6 +376,7 @@
 /Users/minh/beam/cinderblock/tests/common/decorators/test_ensure_reads_restricted_model_set.py|3.97484|1697831031
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_ap_invoice_link.py|2.95845|1685143761
 /Users/minh/Documents/courses/cs234/cs_234hw/hw2/code2|2.36549|1715148017
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/_cookiecutter_templates|3.24483|1719971307
 /Users/minh/.virtualenvs/cinderblock|1.38723|1697832741
 /Users/minh/losing_control__oddmob Project|1.47623|1712387105
 /Users/minh/beam/cinderblock/minh_ignore/bill_samples/1afe0f4e-fc5b-4298-90fa-e73bec1c84b6.pdf|2.5|1719943170
@@ -372,12 +396,13 @@
 /Users/minh/beam/cinderblock/tests/agave2/services/test_free_form_create_ap_invoice_link.py|2.90373|1686873622
 /Users/minh/project/transformer-experiments|17.6367|1719542618
 /Users/minh/project/minhxle.github.io/404.html|1.18098|1711175954
+/Users/minh/project/music_share|12.7251|1719987628
 /Users/minh/career/interviews/practice/avent_of_code/mirage_9.py|1.62|1716666329
 /Users/minh/beam/cinderblock/external/agave|1|1719847882
-/Users/minh/career/interviews/practice/avent_of_code/test_fertilizer.py|3.35069|1716524739
-/Users/minh/beam/cinderblock/tests/billing/utils.py|3.5311|1697730060
-/Users/minh/beam/cinderblock/tests/billing/views/test_invoice_approval_workflow.py|2.73307|1688767093
 /Users/minh/beam/terraform/scripts/update_secret.py|1.5462|1691443494
+/Users/minh/beam/cinderblock/tests/billing/views/test_invoice_approval_workflow.py|2.73307|1688767093
+/Users/minh/beam/cinderblock/tests/billing/utils.py|3.5311|1697730060
+/Users/minh/career/interviews/practice/avent_of_code/test_fertilizer.py|3.35069|1716524739
 /Users/minh/career/interviews/imbue/dictionary.py|3.5364|1712967621
 /Users/minh/Downloads/dotfiles/nvim/lua/custom|2.21363|1681000325
 /Users/minh/beam/cinderblock/tests/agave2/daemons/test_prime_contract_creation_consumer.py|3.61111|1695246569
@@ -385,6 +410,7 @@
 /Users/minh/career/interviews/practice/avent_of_code/test_dish_14.py|10.1139|1716524739
 /Users/minh/foo.py|1.47623|1712387154
 /Users/minh/beam/cinderblock/tests/agave2/services/test_project_link_handler_outbound_link.py|2.93122|1686869472
+/Users/minh/project/templates/basic_python_project|3.24483|1719969579
 /Users/minh/beam/cinderblock/tests/daemons_execution/test_valid_daemons_file.py|2.91495|1719862235
 /Users/minh/project/receipt/normal.txt|1.06288|1699200953
 /Users/minh/.beam_aliases|1.46795|1685599247
@@ -423,6 +449,7 @@
 /Users/minh/beam/cinderblock/tests/ocr/services/test_backtest_ocr_dag_v2.py|10.3786|1719963759
 /Users/minh/career/leetcode|7.66048|1713494229
 /Users/minh/.pyenv/versions/homie/bin/postactivate|1.8|1718775343
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/alembic|2|1719973068
 /Users/minh/beam/cinderblock/tests/page_resources/views|1.06288|1697845096
 /Users/minh/beam/cinderblock-openapi|2.24564|1693350266
 /Users/minh/career/interviews/practice/avent_of_code/boat_race.txt|1.62|1716666350
@@ -470,6 +497,7 @@
 /Users/minh/beam/cinderblock/banking/hops.py|1.55201|1696868423
 /Users/minh/.config/nvim_custom/custom|1.85524|1693419200
 /Users/minh/Downloads/cursor-streaming-markdown-problem-starter|2.349|1716874434
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/core|1|1719971255
 /Users/minh/career/interviews/practice/avent_of_code/python/day1.txt|1.62|1716666425
 /Users/minh/.config/nvim/lua/custom/plugins.lua|1.34228|1693419367
 /Users/minh/beam/cinderblock/billing/views/invoice_approval.py|1.29066|1687894157
@@ -478,7 +506,7 @@
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_ap_invoice_payment_handler_outbound_link.py|1.08296|1687213684
 /Users/minh/career/interviews/practice/avent_of_code/typescript/build/index.js|4.21007|1716668994
 /Users/minh/career/interviews/practice|4.55009|1716431401
-/Users/minh/project/python_project_template|5.77895|1718775588
+/Users/minh/project/python_project_template|8.10793|1719969220
 /Users/minh/career/interviews/practice/avent_of_code/python/reflection_13.txt|1.62|1716666425
 /Users/minh/beam/cinderblock/tests/page_resources/views/test_bill_list_row.py|8.75424|1697061429
 /Users/minh/career/interviews/practice/avent_of_code/python/mirage_9.txt|1.62|1716666425
@@ -488,6 +516,7 @@
 /Users/minh/career/interviews/xai|3.87885|1716665722
 /Users/minh/Documents/courses/cs234|4.01886|1714712610
 /Users/minh/beam/cinderblock/tests/banking/services/test_get_estimated_dates_for_source_and_dest_types_and_businesses.py|3.21838|1697126245
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/requirements.txt|2|1719978606
 /Users/minh/beam/cinderblock/billing/views/invoice_line_item_markup_link.py|2.9983|1714091756
 /Users/minh/career/interviews/practice/avent_of_code/camel_card.py|1.62|1716666329
 /Users/minh/beam/terraform|13.649|1719963915
@@ -516,7 +545,9 @@
 /Users/minh/beam/cinderblock/tests/base.py|1.10161|1691193670
 /Users/minh/career/interviews/practice/avent_of_code/scratchcards.txt|1.62|1716666350
 /Users/minh/Documents/courses/cs234/hw/CS234_A1.pdf|1.3122|1712968936
+/Users/minh/project/templates/.git|2|1719969314
 /Users/minh/beam/cinderblock/tests/billing/views/test_scheduled_invoice_payment.py|4.87347|1692727283
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/core/__init__.py|1|1719971330
 /Users/minh/beam/cinderblock/tests/banking/views/test_transaction_account.py|6.44425|1697842589
 /Users/minh/beam/cinderblock/ocr/urls.py|1|1719847882
 /Users/minh/Downloads/agave-api-2021-11-21.yaml|1.15662|1683235501
@@ -552,6 +583,7 @@
 /Users/minh/beam/cinderblock/tests/page_resources/views/test_gc_project_list_row.py|1.51991|1690243033
 /Users/minh/beam/cinderblock/external/aws|1|1719847882
 /Users/minh/.config/nvim_custom|1.2717|1712513998
+/Users/minh/project/templates/python_webapp/{{cookiecutter.project_name}}/src|1|1719973125
 /Users/minh/Creative Cloud Files Personal Account im1nh27@gmail.com 5B4B8F7D585A0C920A495CC3@AdobeID|2.09803|1712387083
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_ar_invoice_payment_handler_outbound_link.py|1.08296|1687213971
 /tmp|2.77914|1719593793
@@ -569,6 +601,7 @@
 /Users/minh/beam/cinderblock/transfers/migrations/0001_initial.py|2.07554|1696461803
 /Users/minh/beam/cinderblock/tests/billing/daemons/test_finalize_transactions_for_scheduled_payments.py|8.02629|1697750324
 /Users/minh/beam/cinderblock/minh_ignore/bill_samples/d478a2de-5ddb-4645-ba10-4e45aaac79ab.pdf|1|1719942450
+/Users/minh/project/music_share/.gitignore|1|1719987029
 /Users/minh/beam/mosaic/apps/web/.env.development.local|1.08838|1692370969
 /Users/minh/beam/cinderblock/tests/agave2/services/test_create_free_form_ar_invoice_link.py|2.45464|1686937331
 /Users/minh/beam/cinderblock/billing/views/base_invoice.py|1.39518|1696983043
@@ -585,6 +618,7 @@
 /Users/minh/beam/cinderblock/tests/project/views/test_prime_contract.py|2.10175|1685734494
 /Users/minh/beam/cinderblock/tests/external/agave/test_vendors.py|1.90042|1683750276
 /Users/minh/career/interviews/practice/avent_of_code/python/boat_race.txt|1.62|1716666425
+/Users/minh/project/templates/python_webapp/core_python_project|2|1719969985
 /Users/minh/beam/cinderblock/external/__init__.py|1|1719847882
 /Users/minh/beam/cinderblock/external/openai|1|1719847882
 /Users/minh/career/interviews/practice/avent_of_code/camel_card_example.txt|1.62|1716666350
@@ -595,6 +629,7 @@
 /Users/minh/Documents|2.06002|1712884056
 /Users/minh/beam/cinderblock/external/opsgenie|1|1719847882
 /Users/minh/beam/cinderblock/tests/billing/views/test_invoice_internal_note.py|1.00348|1689890289
+/Users/minh/project/templates/basic_python_project/{{cookiecutter.project_name}}/src|1|1719969404
 /Users/minh/career/interviews/imbue/interview2/old|1.3122|1714349298
 /Users/minh/Documents/courses/cs234/hw/hw1/assignment1_template/questions.tex|1.3122|1713506082
 /Users/minh/beam/cinderblock/tests/project/views/test_project.py|2.10335|1713807440
