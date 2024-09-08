@@ -17,9 +17,6 @@ local plugins = {
       require("custom.configs.conform")
     end,
   },
-  {
-    "hrsh7th/nvim-cmp",
-  },
   -- override plugin configs
   {
     "williamboman/mason.nvim",
@@ -128,6 +125,44 @@ local plugins = {
       require("custom.configs.gp")
     end,
   },
+  -- {
+  --   "Exafunction/codeium.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("codeium").setup({})
+  --   end,
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "hrsh7th/nvim-cmp",
+  --   },
+  -- },
+  {
+    "hrsh7th/nvim-cmp",
+    -- TODO figure out how to extend sources
+    -- config = function()
+    --   require("custom.configs.cmp")
+    -- end,
+  },
+  {
+    "olimorris/onedarkpro.nvim",
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+  },
+  -- {
+  --   "epwalsh/obsidian.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("obsidian").setup({
+  --       workspaces = {
+  --         {
+  --           name = "personal",
+  --           path = "~/obsidian/minh",
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- }
 }
 
 return plugins

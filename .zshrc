@@ -116,6 +116,10 @@ if [ -f $HOME/.aliases ]; then
   source $HOME/.aliases
 fi
 
+if [ -f $HOME/.secrets ]; then
+  source $HOME/.secrets
+fi
+
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -151,7 +155,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 #   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
 #   export PATH=`gem environment gemdir`/bin:$PATH
 # fi
-source '/opt/homebrew/opt/autoenv/activate.sh'
+# source '/opt/homebrew/opt/autoenv/activate.sh'
 
 
 export PATH="$PATH:$HOME/scripts"

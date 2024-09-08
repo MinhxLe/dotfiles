@@ -60,6 +60,7 @@ local servers = {
   "bashls",
   "lua_ls",
   "terraformls",
+  "ruff_lsp",
 }
 
 for _, lsp in ipairs(servers) do

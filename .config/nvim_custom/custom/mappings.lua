@@ -44,6 +44,12 @@ M.comment = {
 
 M.fzf = {
   n = {
+    ["<C-t>"] = {
+      function()
+        require("fzf-lua").files({cwd='./minh_ignore'})
+      end,
+      "fzf search lines",
+    },
     ["<C-s>"] = {
       function()
         require("fzf-lua").grep_project()
