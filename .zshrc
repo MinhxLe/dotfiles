@@ -159,3 +159,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 
 
 export PATH="$PATH:$HOME/scripts"
+
+HISTFILE=~/.zsh_history
+HISTSIZE=99999
+SAVEHIST=$HISTSIZE
+
+. "$HOME/.cargo/env"

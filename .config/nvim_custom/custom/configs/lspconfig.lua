@@ -61,6 +61,8 @@ local servers = {
   "lua_ls",
   "terraformls",
   "ruff_lsp",
+  "gopls",
+  "golangci_lint_ls",
 }
 
 for _, lsp in ipairs(servers) do
