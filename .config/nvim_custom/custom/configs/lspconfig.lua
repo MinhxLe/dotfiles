@@ -42,15 +42,6 @@ lspconfig.pyright.setup({
   },
 })
 
-lspconfig.tsserver.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    tsserver = {
-      autoImportFileExcludePatterns = { "antd", "react-i18next", "i18next", "cb/src" },
-    },
-  },
-})
 
 -- if you just want default config for the servers then put them in a table
 local servers = {

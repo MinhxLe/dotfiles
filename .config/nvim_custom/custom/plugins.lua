@@ -139,9 +139,7 @@ local plugins = {
   {
     "hrsh7th/nvim-cmp",
     -- TODO figure out how to extend sources
-    -- config = function()
-    --   require("custom.configs.cmp")
-    -- end,
+    opts =  require("custom.configs.cmp")
   },
   {
     "olimorris/onedarkpro.nvim",
