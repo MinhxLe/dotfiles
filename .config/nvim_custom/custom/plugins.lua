@@ -139,7 +139,7 @@ local plugins = {
   {
     "hrsh7th/nvim-cmp",
     -- TODO figure out how to extend sources
-    opts =  require("custom.configs.cmp")
+    opts = require("custom.configs.cmp")
   },
   {
     "olimorris/onedarkpro.nvim",
@@ -167,7 +167,7 @@ local plugins = {
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua",    -- for providers='copilot'
+      "zbirenbaum/copilot.lua",      -- for providers='copilot'
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
@@ -194,7 +194,18 @@ local plugins = {
         ft = { "markdown", "Avante" },
       },
     },
-  }
+  },
+  {
+    "echasnovski/mini.files",
+    lazy = false,
+    config = function()
+      require("mini.files").setup()
+    end,
+  },
+  -- TODO https://github.com/benlubas/molten-nvim
+  -- {
+  --   "benlubas/molten-nvim",
+  -- },
   -- {
   --   "epwalsh/obsidian.nvim",
   --   lazy = false,
