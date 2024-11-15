@@ -19,3 +19,6 @@ source $HOME/scripts/git_aliases.sh
 source $HOME/scripts/uv_aliases.sh
 source $HOME/scripts/python_aliases.sh
 
+# venv
+alias qvenv="source .venv/bin/activate"
+alias pip="uv pip"

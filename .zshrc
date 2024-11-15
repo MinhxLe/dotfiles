@@ -121,12 +121,12 @@ if [ -f $HOME/.secrets ]; then
 fi
 
 # pyenv stuff
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+#
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 
 
@@ -140,7 +140,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 ## Beam specific stuff
 
-export WORKON_HOME=$HOME/.virtualenvs
+# export WORKON_HOME=$HOME/.virtualenvs
 # # nvm
 # if command -v brew &> /dev/null ; then
 #   export NVM_DIR=~/.nvm

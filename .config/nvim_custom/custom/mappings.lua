@@ -46,7 +46,7 @@ M.fzf = {
   n = {
     ["<C-t>"] = {
       function()
-        require("fzf-lua").files({cwd='./minh_ignore'})
+        require("fzf-lua").files()
       end,
       "fzf search lines",
     },

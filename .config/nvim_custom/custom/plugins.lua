@@ -202,6 +202,10 @@ local plugins = {
       require("mini.files").setup()
     end,
   },
+  {
+    "NoahTheDuke/vim-just",
+    lazy = false,
+  }
   -- TODO https://github.com/benlubas/molten-nvim
   -- {
   --   "benlubas/molten-nvim",
