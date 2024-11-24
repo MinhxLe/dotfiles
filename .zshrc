@@ -164,7 +164,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=$HISTSIZE
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 
 # BEGIN opam configuration
@@ -174,3 +174,8 @@ SAVEHIST=$HISTSIZE
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/minh/.opam/opam-init/init.zsh' ]] || source '/Users/minh/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.local/bin/env"
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh

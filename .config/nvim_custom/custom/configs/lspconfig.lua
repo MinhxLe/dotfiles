@@ -33,33 +33,32 @@ local lspconfig = require("lspconfig")
 -- }
 -- before this was basedpyright
 lspconfig.pyright.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  settings = {
-    python = {
-      pythonPath = vim.fn.exepath("python"),
-    },
-  },
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		python = {
+			pythonPath = vim.fn.exepath("python"),
+		},
+	},
 })
-
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "html",
-  "cssls",
-  "clangd",
-  "bashls",
-  "lua_ls",
-  "terraformls",
-  "ruff_lsp",
-  "gopls",
-  "golangci_lint_ls",
-  "julials"
+	"html",
+	"cssls",
+	"clangd",
+	"bashls",
+	"lua_ls",
+	"terraformls",
+	"ruff",
+	"gopls",
+	"golangci_lint_ls",
+	"julials",
 }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
 end
