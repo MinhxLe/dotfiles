@@ -244,3 +244,4 @@ M.gp = {
 		["<C-g>i"] = { ":<C-u>'<,'>GpImplement<cr>", "GpImplement" },
 	},
 }
+return M
