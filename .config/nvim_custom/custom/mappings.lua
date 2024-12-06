@@ -44,6 +44,42 @@ M.comment = {
 
 M.fzf = {
 	n = {
+		["<C-t>"] = {
+			function()
+				require("fzf-lua").files()
+			end,
+			"fzf search lines",
+		},
+		["<C-a>"] = {
+			function()
+				require("fzf-lua").grep_project({ rg_opts = "--hidden --no-ignore" })
+			end,
+			"fzf search lines",
+		},
+		["<C-s>"] = {
+			function()
+				require("fzf-lua").grep_project()
+			end,
+			"fzf search lines",
+		},
+		["<C-p>"] = {
+			function()
+				require("fzf-lua").files()
+			end,
+			"fzf search files",
+		},
+		["<C-f>"] = {
+			function()
+				require("fzf-lua").grep_curbuf()
+			end,
+			"fzf search buffer",
+		},
+		["<C-b>"] = {
+			function()
+				require("fzf-lua").buffers()
+			end,
+			"fzf search buffer",
+		},
 		["<leader>ft"] = {
 			function()
 				require("fzf-lua").files()
@@ -208,18 +244,3 @@ M.gp = {
 		["<C-g>i"] = { ":<C-u>'<,'>GpImplement<cr>", "GpImplement" },
 	},
 }
-
-M.slime = {
-	v = {
-		["<leader>s"] = {
-			function()
-				vim.cmd([[SlimeSend]])
-			end,
-		},
-		-- ["<leader>su"] = {
-		-- 	function() end,
-		-- },
-	},
-}
-
-return M
