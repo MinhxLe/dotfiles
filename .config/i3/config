@@ -1,8 +1,11 @@
 ### Programs ###
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/dunst/launch.sh
 exec_always feh --bg-scale $HOME/Pictures/wallpapers/mountains.jpg
+# exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id redshift
 #exec --no-startup-id nitrogen --restore
 # exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
@@ -74,16 +77,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-# bindsym $mod+h split h
-
+# bindsym $mod+h split horizontal
 # split in vertical orientation
-# bindsym $mod+v split v
-
+# bindsym $mod+v split vertical
 bindsym $mod+backslash  split horizontal
-bindsym $mod+bar        split horizontal
-bindsym $mod+apostrophe split vertical
-bindsym $mod+quotedbl   split vertical
 bindsym $mod+minus      split vertical
+# bindsym $mod+bar        split horizontal
+# bindsym $mod+quotedbl   split vertical
 
 # enter fullscreen mode for the focused container
 bindsym $mod+Shift+f fullscreen toggle
@@ -187,6 +187,6 @@ smart_borders on
 default_border pixel 3
 # new_window pixel 2
 
-include ~/.config/i3/rose-pine.theme
+include ~/.config/i3/rose-pine-dawn.theme
 
 # font xft:SF Pro Display:Style=Light:size=11 
