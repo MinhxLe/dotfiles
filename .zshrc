@@ -47,3 +47,24 @@ export PATH="$PATH:$HOME/scripts"
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=$HISTSIZE
+# . "$HOME/.cargo/env"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/minh/.opam/opam-init/init.zsh' ]] || source '/Users/minh/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.local/bin/env"
+
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/minh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/minh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/minh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/minh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
