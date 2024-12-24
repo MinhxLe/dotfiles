@@ -1,7 +1,7 @@
 # oh my zsh set up
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git)
+# plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 if command -v nvim &> /dev/null 

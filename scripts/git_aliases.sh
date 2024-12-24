@@ -89,6 +89,7 @@ export function gtusr() {
     fi
   done
 }
+alias gco="git checkout"
 
 # TODO syncing
 # TODO stack
