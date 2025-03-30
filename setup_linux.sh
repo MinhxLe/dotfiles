@@ -1,26 +1,9 @@
 #!/bin/bash
 
-# Update package list only if it hasn't been updated recently
-apt_updated=false
-if [ $(find /var/lib/apt/lists -maxdepth 0 -mtime +1 | wc -l) -gt 0 ]; then
-    echo "Updating package lists..."
-    apt update
-    apt_updated=true
-fi
-
-# Check and install packages
-for package in tmux neovim zsh fzf silversearcher-ag; do
-    if ! dpkg -l | grep -q " $package "; then
-        echo "Installing $package..."
-        if [ "$apt_updated" = false ]; then
-            apt update
-            apt_updated=true
-        fi
-        apt install -y $package
-    else
-        echo "$package is already installed"
-    fi
-done
+sudo add-apt-repository ppa:neovim-ppa/unstable
+apt-get update
+# TODO pin version
+apt-get install tmux zsh fzf silversearcher-ag neovim -y
 
 # Install Oh My Zsh if not already installed
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -29,7 +12,6 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 else
     echo "Oh My Zsh is already installed"
 fi
-
 
 # Install tmux plugin manager if not already installed
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
@@ -58,5 +40,3 @@ user=$(whoami)
 chsh $user -s /bin/zsh
 
 echo "Setup complete!"
-
-
