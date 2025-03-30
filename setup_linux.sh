@@ -13,6 +13,8 @@ else
     echo "Oh My Zsh is already installed"
 fi
 
+# TODO checkout .zshrc again b/c it gets clobbered
+
 # Install tmux plugin manager if not already installed
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
     echo "Installing tmux plugin manager..."
