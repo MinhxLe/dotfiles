@@ -22,3 +22,6 @@ source $HOME/scripts/python_aliases.sh
 # venv
 alias qvenv="source .venv/bin/activate"
 alias pip="uv pip"
+
+# runpod
+alias rp="runpodctl"

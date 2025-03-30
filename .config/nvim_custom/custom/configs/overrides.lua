@@ -15,8 +15,7 @@ M.treesitter = {
     "python",
     "terraform",
   },
-  indent = {
-    enable = true,
+  indent = { enable = true,
     -- disable = {
     --   "python"
     -- },
