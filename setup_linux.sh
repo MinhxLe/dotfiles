@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo add-apt-repository ppa:neovim-ppa/unstable
+add-apt-repository ppa:neovim-ppa/unstable
 apt-get update
 # TODO pin version
 apt-get install tmux zsh fzf silversearcher-ag neovim -y
