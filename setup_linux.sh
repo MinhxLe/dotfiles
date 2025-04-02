@@ -42,3 +42,6 @@ user=$(whoami)
 chsh $user -s /bin/zsh
 
 echo "Setup complete!"
+
+# TODO
+# tmux is bugged where it defaults to bash intead of using zsh
