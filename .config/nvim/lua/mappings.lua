@@ -48,25 +48,42 @@ map("n", "<leader>pb", "iimport ipdb;ipdb.set_trace()  # noqa<Esc>", { desc = "I
 
 -- Treesitter context mappings
 map("n", "[c", function() require("treesitter-context").go_to_context() end, { desc = "Go to context" })
+
+--  Custom 
+-- map("n", "<leader>rp", function()
+--   if not _TMUX_PANE_ID then
+--     local pane_id = vim.fn.input("Enter tmux pane ID: ")
+--     _TMUX_PANE_ID = pane_id
+--   end
+--   local pytest_command = "pytest -s " .. vim.fn.expand("%")
+--   vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
+-- end, { desc = "run pytest on current file in buffer" })
 map("n", "<leader>rp", function()
   if not _TMUX_PANE_ID then
     local pane_id = vim.fn.input("Enter tmux pane ID: ")
     _TMUX_PANE_ID = pane_id
   end
-  local pytest_command = "pytest -s " .. vim.fn.expand("%")
-  vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
-end, { desc = "run pytest on current file in buffer" })
+  local file_path = vim.fn.expand("%")
+  local run_command = "%run " .. file_path
+  vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. run_command .. "' Enter")
+end, { desc = "run current file in IPython" })
 
-map("n", "<leader>rpu", function()
-  if not _TMUX_PANE_ID then
-    local pane_id = vim.fn.input("Enter tmux pane ID: ")
-    _TMUX_PANE_ID = pane_id
-  end
-  local pytest_command = "pytest -s " ..
-  vim.fn.expand("%") .. " -k " .. require("custom.utils").get_python_function_name()
-  vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
-end, { desc = "run pytest of current test on current file in buffer" })
-
+-- Slime
+map("n", "<leader>sf", function()
+  -- Store current position
+  local start_pos = vim.fn.getpos(".")
+  
+  -- Use pythonsense to select inner function (af = "a function")
+  -- Use "if" for "inner function" if you want to exclude decorators/docstrings
+  vim.cmd("normal! vif")
+  
+  -- Use the SlimeSend command
+  vim.cmd([[execute "normal! \<Plug>SlimeSend"]])
+  
+  -- Return to normal mode and restore position
+  vim.cmd("normal! <Esc>")
+  vim.fn.setpos(".", start_pos)
+end, { desc = "send inner function to REPL using pythonsense" })
 -- Trouble plugin mappings
 map("n", "<leader>xx", function() require("trouble").toggle() end, { desc = "Toggle trouble" })
 map("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end,
