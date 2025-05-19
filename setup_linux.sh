@@ -22,11 +22,6 @@ if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 else
     echo "tmux plugin manager is already installed"
 fi
-
-# Install NvChad 
-echo "Installing NvChad..."
-git clone https://github.com/NvChad/starter ~/.config/nvim --depth 1
-ln -sf ~/.config/nvim_custom/custom ~/.config/nvim/lua/custom
     
 # Install uv if not already installed
 if ! command -v uv &> /dev/null; then
