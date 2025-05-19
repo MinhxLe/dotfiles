@@ -8,7 +8,6 @@ map("n", ";", ":", { desc = "enter command mode", nowait = true })
 map("n", "fn", ":let @+ = expand('%')<cr>", { desc = "Copy file path" })
 map("n", "cn", ":cn<cr>", { desc = ":cn" })
 map("n", "cN", ":cN<cr>", { desc = ":cN" })
-map("n", "fm", function() vim.lsp.buf.format({ async = true }) end, { desc = "LSP formatting" })
 
 -- Comment plugin mappings
 map("n", "<leader>cc", "gcc", { desc = "toggle comment", remap = true })
@@ -30,61 +29,11 @@ map("n", "<leader>fp", function() require("fzf-lua").files() end, { desc = "fzf 
 map("n", "<leader>ff", function() require("fzf-lua").grep_curbuf() end, { desc = "fzf search buffer" })
 map("n", "<leader>fb", function() require("fzf-lua").buffers() end, { desc = "fzf search buffer" })
 
--- LSP config mappings
-map("n", "<leader>q", function() vim.diagnostic.setqflist() end, { desc = "diagnostic setloclist" })
-
--- Tmux integration mappings
-_TMUX_PANE_ID = _TMUX_PANE_ID or nil
-map("n", "<leader>rr", function()
-  if not _TMUX_PANE_ID then
-    local pane_id = vim.fn.input("Enter tmux pane ID: ")
-    _TMUX_PANE_ID = pane_id
-  end
-  vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " C-p Enter")
-end, { desc = "Run last command in tmux pane" })
-
--- Python development mappings
-map("n", "<leader>pb", "iimport ipdb;ipdb.set_trace()  # noqa<Esc>", { desc = "Insert Python debugger" })
-
 -- Treesitter context mappings
 map("n", "[c", function() require("treesitter-context").go_to_context() end, { desc = "Go to context" })
 
---  Custom 
--- map("n", "<leader>rp", function()
---   if not _TMUX_PANE_ID then
---     local pane_id = vim.fn.input("Enter tmux pane ID: ")
---     _TMUX_PANE_ID = pane_id
---   end
---   local pytest_command = "pytest -s " .. vim.fn.expand("%")
---   vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. pytest_command .. "' Enter")
--- end, { desc = "run pytest on current file in buffer" })
-map("n", "<leader>rp", function()
-  if not _TMUX_PANE_ID then
-    local pane_id = vim.fn.input("Enter tmux pane ID: ")
-    _TMUX_PANE_ID = pane_id
-  end
-  local file_path = vim.fn.expand("%")
-  local run_command = "%run " .. file_path
-  vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " '" .. run_command .. "' Enter")
-end, { desc = "run current file in IPython" })
-
--- Slime
-map("n", "<leader>sf", function()
-  -- Store current position
-  local start_pos = vim.fn.getpos(".")
-  
-  -- Use pythonsense to select inner function (af = "a function")
-  -- Use "if" for "inner function" if you want to exclude decorators/docstrings
-  vim.cmd("normal! vif")
-  
-  -- Use the SlimeSend command
-  vim.cmd([[execute "normal! \<Plug>SlimeSend"]])
-  
-  -- Return to normal mode and restore position
-  vim.cmd("normal! <Esc>")
-  vim.fn.setpos(".", start_pos)
-end, { desc = "send inner function to REPL using pythonsense" })
 -- Trouble plugin mappings
+map("n", "gR", function() require("trouble").toggle("lsp_references") end, { desc = "LSP references" })
 map("n", "<leader>xx", function() require("trouble").toggle() end, { desc = "Toggle trouble" })
 map("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end,
   { desc = "Workspace diagnostics" })
@@ -92,7 +41,6 @@ map("n", "<leader>xd", function() require("trouble").toggle("document_diagnostic
   { desc = "Document diagnostics" })
 map("n", "<leader>xq", function() require("trouble").toggle("quickfix") end, { desc = "Quickfix list" })
 map("n", "<leader>xl", function() require("trouble").toggle("loclist") end, { desc = "Location list" })
-map("n", "gR", function() require("trouble").toggle("lsp_references") end, { desc = "LSP references" })
 
 -- GP plugin mappings
 map("n", "<C-g>i", ":<C-u>'<,'>GpImplement<cr>", { desc = "GpImplement" })
@@ -102,6 +50,7 @@ map("v", "<C-g>i", ":<C-u>'<,'>GpImplement<cr>", { desc = "GpImplement" })
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
 -- LSP mappings
+map("n", "fm", function() vim.lsp.buf.format({ async = true }) end, { desc = "LSP formatting" })
 map("n", "gD", function() vim.lsp.buf.declaration() end, { desc = "LSP declaration" })
 map("n", "gd", function() vim.lsp.buf.definition() end, { desc = "LSP definition" })
 map("n", "K", function() vim.lsp.buf.hover() end, { desc = "LSP hover" })
@@ -119,3 +68,49 @@ map("n", "<leader>wr", function() vim.lsp.buf.remove_workspace_folder() end, { d
 map("n", "<leader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
   { desc = "List workspace folders" })
 map("v", "<leader>ca", function() vim.lsp.buf.code_action() end, { desc = "LSP code action" })
+map("n", "<leader>q", function() vim.diagnostic.setqflist() end, { desc = "diagnostic setloclist" })
+
+-- Tmux integration mappings
+_TMUX_PANE_ID = _TMUX_PANE_ID or nil
+local function get_or_set_tmux_pane_id()
+  if not _TMUX_PANE_ID then
+    local pane_id = vim.fn.input("Enter tmux pane ID: ")
+    _TMUX_PANE_ID = pane_id
+  end
+  return _TMUX_PANE_ID
+end
+
+-- Function to send text to tmux pane
+local function send_to_tmux(text)
+  local pane_id = get_or_set_tmux_pane_id()
+  vim.fn.system("tmux send-keys -t " .. pane_id .. " '" .. text .. "' Enter")
+end
+
+map("n", "<leader>rr", function()
+  get_or_set_tmux_pane_id()
+  vim.fn.system("tmux send-keys -t " .. _TMUX_PANE_ID .. " C-p Enter")
+end, { desc = "Run last command in tmux pane" })
+
+-- Python development mappings
+map("n", "<leader>pb", "iimport ipdb;ipdb.set_trace()  # noqa<Esc>", { desc = "Insert Python debugger" })
+
+-- Map to run current file in IPython
+vim.keymap.set("n", "<leader>rp", function()
+  local file_path = vim.fn.expand("%")
+  local run_command = "%run " .. file_path
+  send_to_tmux(run_command)
+end, { desc = "run current file in IPython" })
+
+-- run current method
+vim.keymap.set("n", "<leader>rm", function()
+  -- Get the current line after the jump (before cursor position is restored)
+  local line_num = vim.fn.line('.')
+  local line = vim.fn.getline(line_num)
+  -- Extract function name
+  local function_name = line:match("^%s*def%s+([%w_]+)")
+  if function_name then
+    send_to_tmux(function_name .. "()")
+  else
+    print("No function found")
+  end
+end, { desc = "run current python function" })

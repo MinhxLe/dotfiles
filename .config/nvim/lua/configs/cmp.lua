@@ -1,11 +1,18 @@
 local compare = require('cmp.config.compare')
 local opts = {
   sources = {
-    { name = "nvim_lsp",  priority = 8 },
-    { name = "buffer", priority = 7 },
-    { name = "nvim_lua", priority = 6  },
+    { name = "nvim_lsp",   priority = 8 },
+    { name = "buffer",     priority = 7 },
+    { name = "nvim_lua",   priority = 6 },
     { name = "async_path", priority = 7 },
     -- { name = "luasnip", priority = 2 },
+    --
+    per_filetype = {
+      sql = { 'dadbod', 'buffer' },
+    },
+    providers = {
+      dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+    },
   },
   sorting = {
     comparators = {

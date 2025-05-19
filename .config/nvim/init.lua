@@ -1,6 +1,3 @@
-vim.g.theme = "onedark"
-vim.g.theme_toggle = { "onedark", "one_light" }
-
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
@@ -79,5 +76,17 @@ vim.api.nvim_create_user_command("UpdateTmuxPaneId",
   end, {}
 )
 vim.g.slime_target = "tmux"
+vim.g.slime_bracketed_paste = 1
+-- vim.g.slime_python_ipython = 1
 
-vim.g.slime_python_ipython = 1
+
+-- -- automatically write the file on focus lost
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
+  callback = function()
+    if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+      vim.cmd([[silent update]])
+    end
+  end,
+})
+
+-- vim.cmd("colorscheme dwkanagawa")
