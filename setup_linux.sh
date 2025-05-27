@@ -12,12 +12,11 @@ chmod u+x nvim-linux-x86_64.appimage
 
 # Extract AppImage without FUSE
 ./nvim-linux-x86_64.appimage --appimage-extract
-sudo mv squashfs-root /opt/nvim
-sudo ln -sf /opt/nvim/usr/bin/nvim /usr/local/bin/nvim
-rm nvim.appimage
+mv squashfs-root /opt/nvim
+ln -sf /opt/nvim/usr/bin/nvim /usr/local/bin/nvim
 
 # Create symlink for 'vim' command (optional)
-sudo ln -sf /usr/local/bin/nvim /usr/local/bin/vim
+# ln -sf /usr/local/bin/nvim /usr/local/bin/vim
 
 
 # Install Oh My Zsh if not already installed
