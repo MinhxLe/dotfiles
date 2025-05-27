@@ -5,14 +5,7 @@ local opts = {
     { name = "buffer",     priority = 7 },
     { name = "nvim_lua",   priority = 6 },
     { name = "async_path", priority = 7 },
-    -- { name = "luasnip", priority = 2 },
-    --
-    per_filetype = {
-      sql = { 'dadbod', 'buffer' },
-    },
-    providers = {
-      dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
-    },
+    { name = "luasnip",    priority = 2 },
   },
   sorting = {
     comparators = {

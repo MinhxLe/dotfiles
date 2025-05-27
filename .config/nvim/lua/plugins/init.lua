@@ -1,4 +1,5 @@
 return {
+  -- import = "nvchad.blink.lazyspec",
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
@@ -83,13 +84,18 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = false,
   },
-  {
-    "hrsh7th/nvim-cmp",
-    opts = require("configs.cmp"),
-  },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   opts = require("configs.cmp"),
+  -- },
+  -- {
+  --   "Saghen/blink.cmp",
+  --   opts = require 'configs.cmp'
+  -- },
+  { import = "nvchad.blink.lazyspec" },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "saghen/blink.cmp" },
+    dependencies = { "Saghen/blink.cmp" },
     config = function()
       require "configs.lspconfig"
     end,
