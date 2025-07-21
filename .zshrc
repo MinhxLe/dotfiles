@@ -78,3 +78,8 @@ fi
 
 # eval "$(ssh-agent -s)"
 # ssh-add ~/.ssh/id_ed25519
+
+# For SkyPilot shell completion
+. ~/.sky/.sky-complete.zsh
+export PATH=~/.npm-global/bin:$PATH
+export TZ=America/Los_Angeles

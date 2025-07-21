@@ -114,3 +114,70 @@ vim.keymap.set("n", "<leader>rm", function()
     print("No function found")
   end
 end, { desc = "run current python function" })
+
+-- Function to fold around outermost function using treesitter
+local function fold_outermost_function()
+  local ts = vim.treesitter
+  local cursor = vim.api.nvim_win_get_cursor(0)
+  local row, col = cursor[1] - 1, cursor[2] -- Convert to 0-indexed
+  
+  -- Get the current buffer and its parser
+  local bufnr = vim.api.nvim_get_current_buf()
+  local parser = ts.get_parser(bufnr)
+  if not parser then
+    vim.notify("No treesitter parser found for this buffer", vim.log.levels.WARN)
+    return
+  end
+  
+  local tree = parser:parse()[1]
+  local root = tree:root()
+  
+  -- Find all function nodes that contain the cursor
+  local function_nodes = {}
+  
+  local function find_functions(node)
+    if node:type() == "function_definition" or node:type() == "async_function_definition" then
+      local start_row, start_col, end_row, end_col = node:range()
+      -- Check if cursor is within this function
+      if start_row <= row and row <= end_row and 
+         (start_row < row or start_col <= col) and 
+         (row < end_row or col <= end_col) then
+        table.insert(function_nodes, {
+          node = node,
+          start_row = start_row,
+          end_row = end_row,
+          depth = #function_nodes -- Track nesting depth
+        })
+      end
+    end
+    
+    for child in node:iter_children() do
+      find_functions(child)
+    end
+  end
+  
+  find_functions(root)
+  
+  if #function_nodes == 0 then
+    vim.notify("No function found at cursor position", vim.log.levels.WARN)
+    return
+  end
+  
+  -- Find the outermost function (first one in the list since we traverse top-down)
+  local outermost = function_nodes[1]
+  
+  -- Create the fold
+  local start_line = outermost.start_row + 1 -- Convert to 1-indexed
+  local end_line = outermost.end_row + 1
+  
+  -- Set fold method to manual if not already
+  vim.wo.foldmethod = "manual"
+  
+  -- Create the fold
+  vim.cmd(string.format("%d,%dfold", start_line, end_line))
+  
+  vim.notify(string.format("Folded outermost function (lines %d-%d)", start_line, end_line))
+end
+
+-- Map the function to a key
+map("n", "<leader>zf", fold_outermost_function, { desc = "Fold outermost function" })
