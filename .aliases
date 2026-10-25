@@ -6,14 +6,18 @@ alias v="nvim"
 alias vim="nvim"
 
 # dot files
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dots_qs="dots add -u && dots commit -m 'hi' && dots push"
 
 # terraform
 alias tf="terraform"
 
 # chrome
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome" 
+if [[ "$OSTYPE" == darwin* ]]; then
+  alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+else
+  alias chrome="google-chrome"
+fi
 
 source $HOME/scripts/git_aliases.sh
 source $HOME/scripts/uv_aliases.sh

@@ -1,19 +1,19 @@
-# Setup fzf
+# Setup fzf: only ctrl-r (history search) for now
 # ---------
-if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
-fi
-
-# Auto-completion (disabled: only using ctrl-r for now)
-# ---------------
-# [[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
-
-# Key bindings
-# ------------
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-
-# Only keep ctrl-r (history); restore zsh defaults for ctrl-t and alt-c
-bindkey -M emacs '^T' transpose-chars
-bindkey -M emacs '\ec' capitalize-word
-bindkey -r -M viins '^T' '\ec'
-bindkey -r -M vicmd '^T' '\ec'
+# key-bindings.zsh location: homebrew (macOS / linuxbrew), debian/ubuntu, arch/fedora
+for fzf_bindings in \
+  "${HOMEBREW_PREFIX:-/opt/homebrew}/opt/fzf/shell/key-bindings.zsh" \
+  /usr/share/doc/fzf/examples/key-bindings.zsh \
+  /usr/share/fzf/key-bindings.zsh \
+  /usr/share/fzf/shell/key-bindings.zsh; do
+  if [ -f "$fzf_bindings" ]; then
+    source "$fzf_bindings"
+    # restore zsh defaults for ctrl-t and alt-c
+    bindkey -M emacs '^T' transpose-chars
+    bindkey -M emacs '\ec' capitalize-word
+    bindkey -r -M viins '^T' '\ec'
+    bindkey -r -M vicmd '^T' '\ec'
+    break
+  fi
+done
+unset fzf_bindings

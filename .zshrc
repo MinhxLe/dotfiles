@@ -1,3 +1,11 @@
+# homebrew (macOS: /opt/homebrew, linux: linuxbrew if installed)
+if [ -z "$HOMEBREW_PREFIX" ]; then
+  for brew_bin in /opt/homebrew/bin/brew /home/linuxbrew/.linuxbrew/bin/brew; do
+    [ -x "$brew_bin" ] && eval "$("$brew_bin" shellenv)" && break
+  done
+  unset brew_bin
+fi
+
 # oh my zsh set up
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -20,13 +28,8 @@ if [ -f $HOME/.secrets ]; then
   source $HOME/.secrets
 fi
 
-
-# homebrew
-# export PATH="/opt/homebrew/bin:$PATH"
-
-
 # . "$HOME/.cargo/env"
-. "$HOME/.local/bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 ### Additional Programs
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -55,20 +58,18 @@ SAVEHIST=$HISTSIZE
 #   - the correct directories to the PATH
 #   - auto-completion for the opam binary
 # This section can be safely removed at any time if needed.
-[[ ! -r '/Users/minh/.opam/opam-init/init.zsh' ]] || source '/Users/minh/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+[[ ! -r "$HOME/.opam/opam-init/init.zsh" ]] || source "$HOME/.opam/opam-init/init.zsh" > /dev/null 2> /dev/null
 # END opam configuration
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-. "$HOME/.local/bin/env"
-
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/minh/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/minh/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/minh/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/minh/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+if [ -f "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
+
+# macOS ships an old system ruby; prefer homebrew's
+[ -d /opt/homebrew/opt/ruby/bin ] && export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 
 # # Add to ~/.bashrc or ~/.zshrc on remote machines only
