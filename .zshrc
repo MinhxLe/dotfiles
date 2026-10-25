@@ -24,10 +24,6 @@ if [ -f $HOME/.aliases ]; then
   source $HOME/.aliases
 fi
 
-if [ -f $HOME/.secrets ]; then
-  source $HOME/.secrets
-fi
-
 # . "$HOME/.cargo/env"
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
