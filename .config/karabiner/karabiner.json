@@ -1,0 +1,39 @@
+{
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Option+F: open/focus kitty",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": { "mandatory": ["option"], "optional": ["caps_lock"] }
+                },
+                "to": [{ "shell_command": "open -a kitty" }]
+              }
+            ]
+          },
+          {
+            "description": "Option+D: open/focus Google Chrome",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": { "mandatory": ["option"], "optional": ["caps_lock"] }
+                },
+                "to": [{ "shell_command": "open -a 'Google Chrome'" }]
+              }
+            ]
+          }
+        ]
+      },
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    }
+  ]
+}
