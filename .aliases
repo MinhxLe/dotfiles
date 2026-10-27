@@ -16,7 +16,7 @@ alias tf="terraform"
 if [[ "$OSTYPE" == darwin* ]]; then
   alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 else
-  alias chrome="google-chrome"
+  alias chrome="google-chrome-stable"
 fi
 
 source $HOME/scripts/git_aliases.sh
