@@ -29,3 +29,6 @@ alias pip="uv pip"
 
 # runpod
 alias rp="runpodctl"
+
+# desktop: Eternal Terminal (auto-reconnects) straight into a persistent tmux session
+alias dt='et desktop -c "tmux new -A -s main"'
