@@ -18,3 +18,9 @@ wget
 unzip
 just
 openssh
+
+# Kubernetes (homelab cluster)
+kubectl
+fluxcd
+helm
+k9s
