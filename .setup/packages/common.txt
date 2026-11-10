@@ -1,0 +1,20 @@
+# Every machine (Arch names). One package per line; # comments ok.
+base-devel               # nvim-treesitter compiles parsers
+git
+github-cli
+zsh
+neovim
+tree-sitter-cli          # nvim-treesitter main branch
+tmux
+fzf
+ripgrep
+z
+htop
+jq
+less
+man-db
+rsync
+wget
+unzip
+just
+openssh

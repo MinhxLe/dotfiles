@@ -1,0 +1,5 @@
+# Headless home server
+docker
+docker-compose
+tailscale
+smartmontools
